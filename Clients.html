@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html class="chrome52">
+<head>
+    <script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "0ebaa3bbb8", "applicationID": "14693905", "transactionName": "elgLEEIOCFVQRhcAWFBSCxBDTg1XUVFA", "queueTime": 3, "applicationTime": 88, "agent": "" }</script>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var o = e[n] = { exports: {} }; t[n][0].call(o.exports, function (e) { var o = t[n][1][e]; return r(o || e) }, o, o.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++) r(n[o]); return r }({ 1: [function (t, e, n) { function r() { } function o(t, e, n) { return function () { return i(t, [(new Date).getTime()].concat(u(arguments)), e ? null : this, n), e ? void 0 : this } } var i = t("handle"), a = t(2), u = t(3), c = t("ee").get("tracer"), f = NREUM; "undefined" == typeof window.newrelic && (newrelic = f); var s = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit"], p = "api-", l = p + "ixn-"; a(s, function (t, e) { f[e] = o(p + e, !0, "api") }), f.addPageAction = o(p + "addPageAction", !0), e.exports = newrelic, f.interaction = function () { return (new r).get() }; var d = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, o = "function" == typeof e; return i(l + "tracer", [Date.now(), t, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [Date.now(), r, o], n), o) try { return e.apply(this, arguments) } finally { c.emit("fn-end", [Date.now()], n) } } } }; a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { d[e] = o(l + e) }), newrelic.noticeError = function (t) { "string" == typeof t && (t = new Error(t)), i("err", [t, (new Date).getTime()]) } }, {}], 2: [function (t, e, n) { function r(t, e) { var n = [], r = "", i = 0; for (r in t) o.call(t, r) && (n[i] = e(r, t[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; e.exports = r }, {}], 3: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, o = n - e || 0, i = Array(o < 0 ? 0 : o) ; ++r < o;) i[r] = t[e + r]; return i } e.exports = r }, {}], ee: [function (t, e, n) { function r() { } function o(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, a, i) : i() } function n(n, r, o) { t && t(n, r, o); for (var i = e(o), a = l(n), u = a.length, c = 0; c < u; c++) a[c].apply(i, r); var s = f[m[n]]; return s && s.push([w, n, r, i]), i } function p(t, e) { g[t] = l(t).concat(e) } function l(t) { return g[t] || [] } function d(t) { return s[t] = s[t] || o(n) } function v(t, e) { c(t, function (t, n) { e = e || "feature", m[n] = e, e in f || (f[e] = []) }) } var g = {}, m = {}, w = { on: p, emit: n, get: d, listeners: l, context: e, buffer: v }; return w } function i() { return new r } var a = "nr@context", u = t("gos"), c = t(2), f = {}, s = {}, p = e.exports = o(); p.backlog = f }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (o.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return t[e] = r, r } var o = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { o.buffer([t], r), o.emit(t, e, n) } var o = t("ee").get("handle"); e.exports = r, r.ee = o }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, i, function () { return o++ }) } var o = 1, i = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!h++) { var t = y.info = NREUM.info, e = s.getElementsByTagName("script")[0]; if (t && t.licenseKey && t.applicationID && e) { c(m, function (e, n) { t[e] || (t[e] = n) }); var n = "https" === g.split(":")[0] || t.sslForHttp; y.proto = n ? "https://" : "http://", u("mark", ["onload", a()], null, "api"); var r = s.createElement("script"); r.src = y.proto + t.agent, e.parentNode.insertBefore(r, e) } } } function o() { "complete" === s.readyState && i() } function i() { u("mark", ["domContent", a()], null, "api") } function a() { return (new Date).getTime() } var u = t("handle"), c = t(2), f = window, s = f.document, p = "addEventListener", l = "attachEvent", d = f.XMLHttpRequest, v = d && d.prototype; NREUM.o = { ST: setTimeout, CT: clearTimeout, XHR: d, REQ: f.Request, EV: f.Event, PR: f.Promise, MO: f.MutationObserver }, t(1); var g = "" + location, m = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-974.min.js" }, w = d && v && v[p] && !/CriOS/.test(navigator.userAgent), y = e.exports = { offset: a(), origin: g, features: {}, xhrWrappable: w }; s[p] ? (s[p]("DOMContentLoaded", i, !1), f[p]("load", r, !1)) : (s[l]("onreadystatechange", o), f[l]("onload", r)), u("mark", ["firstbyte", a()], null, "api"); var h = 0 }, {}] }, {}, ["loader"]);</script>
+    <title>Resource Guru</title>
+    <noscript>
+        <meta content="0;url=https://testemrm.resourceguruapp.com/javascript_disabled" http-equiv="refresh" />
+    </noscript>
+    <link href="/assets/application-77aedbda1f36fe09d63c69b87496b7fc.css" media="screen" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Sans+Caption:400,700|Economica:400,700|PT+Sans+Caption+Bold|PT+Sans+Narrow" media="screen" rel="stylesheet" />
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+         RGRecurly = {
+             subdomain: 'resourceguru',
+             publicKey: 'sjc-rnKbtMiAUbFZwIcDJL6eWC'
+         }
+    </script>
+    <script src="/assets/application-3005c307bfc06e9ec84e97784764091c.js"></script>
+    <script src="/assets/pricing-6e38e85bb56987ff0bb25bfa7d70660f.js"></script>
+    <script src="https://js.recurly.com/v3/recurly.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="EJcWYazK77a690nPcXVrGdulLeK3jF+OVKcggmOvgD8=" name="csrf-token" />
+    <script type="text/javascript">
+         window.analytics = window.analytics || [];
+
+         window.analytics.methods = ['identify', 'group', 'track',
+           'page', 'pageview', 'alias', 'ready', 'on', 'once', 'off',
+           'trackLink', 'trackForm', 'trackClick', 'trackSubmit'];
+
+         window.analytics.factory = function (method) {
+             return function () {
+                 var args = Array.prototype.slice.call(arguments);
+                 args.unshift(method);
+                 window.analytics.push(args);
+                 return window.analytics;
+             };
+         };
+
+         for (var i = 0; i < window.analytics.methods.length; i++) {
+             var key = window.analytics.methods[i];
+             window.analytics[key] = window.analytics.factory(key);
+         }
+
+         window.analytics.load = function (key) {
+             if (document.getElementById('analytics-js')) return;
+
+             var script = document.createElement('script');
+             script.type = 'text/javascript';
+             script.id = 'analytics-js';
+             script.async = true;
+             script.src = ('https:' === document.location.protocol
+               ? 'https://' : 'http://')
+               + 'cdn.segment.io/analytics.js/v1/'
+               + key + '/analytics.min.js';
+
+             var first = document.getElementsByTagName('script')[0];
+             first.parentNode.insertBefore(script, first);
+         };
+
+         // Remove any existing mixpanel cookies.
+         cookies = document.cookie.match(new RegExp("mp_.*?_mixpanel="));
+         if (cookies != null) {
+             cookieName = cookies[0];
+             document.cookie = cookieName + ";expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=.resourceguruapp.com";
+         }
+
+         window.analytics.SNIPPET_VERSION = '2.0.9';
+
+         window.analytics.load('y5la1gbbns');
+
+         window.analytics.page();
+    </script>
+    <script type="text/javascript">
+         function getReferringDomain(referrer) {
+             split_url = referrer.split("/");
+             if (split_url.length >= 3) {
+                 return split_url[2];
+             }
+             return referrer;
+         }
+
+         function domainDirect(url) {
+             server = "resourceguruapp.com"
+             if (url.indexOf(server) > -1) {
+                 return "$direct";
+             }
+             else {
+                 return url;
+             }
+         }
+
+         client_side_traits = {
+
+             "ip_address": "10.142.0.3",
+             "$initial_referrer": domainDirect("https://www.google.co.in/"),
+             "$initial_referring_domain": getReferringDomain(domainDirect("https://www.google.co.in/")),
+             "initial_landing_page": "resourceguruapp.com/"
+         }
+
+         var merge_objects = function (defaults, options) {
+             var extended = {};
+             var prop;
+             for (prop in defaults) {
+                 if (Object.prototype.hasOwnProperty.call(defaults, prop)) {
+                     extended[prop] = defaults[prop];
+                 }
+             }
+             for (prop in options) {
+                 if (Object.prototype.hasOwnProperty.call(options, prop)) {
+                     extended[prop] = options[prop];
+                 }
+             }
+             return extended;
+         };
+
+         traits = merge_objects(JSON.parse('{"name":"Vini A","email":"myprivacy2015@gmail.com","company":{"id":"28882","name":"emrm"},"company_id":"28882","company_name":"emrm"}'), client_side_traits);
+
+         utm_hash = {}
+
+         if (Object.keys(utm_hash).length != 0) {
+             traits = merge_objects(traits, utm_hash);
+         }
+
+         if ("" == "true") {
+             analytics.alias("86770", "aa299884-fe4e-4104-adf8-c3ea06229810")
+         }
+
+         analytics.identify("86770", traits, {
+             integrations: {
+                 Intercom: {
+                     user_hash: "e03dbd2f1b5d6306db0d0ffc8d1e2168d9bda51687d4137599d82621feff2f5a"
+                 }
+             }
+         });
+    </script>
+    <script type="text/javascript">
+         analytics.group("28882", {
+             "userId": "86770",
+             "groupId": "28882",
+             "accountName": "emrm",
+             "plan": ""
+         });
+    </script><!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="applayout clients">
+    <div class="prefetch" style="position:fixed; left: -9999px; opacity: 0">
+        <i class="rg-ion-ios-trash"></i><i class="rg-ion-edit"></i><i class="rg-ion-scissors"></i><i class="rg-ion-android-time"></i><i class="rg-ion-chevron-down"></i><i class="rg-ion-gear-a"></i><i class="rg-icon--sick"></i><i class="rg-icon--maternity"></i><i class="rg-icon--training"></i><i class="rg-icon--compassionate"></i><i class="rg-icon--vacation"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar"></i><i class="rg-icon--happy"></i><i class="rg-icon--contacts"></i>
+        <div class="is-icon-link"><i class="rg-icon--calendar"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar is-hovered"></i></div>
+        <span class="rg-btn--availability-down"></span><span class="rg-btn--availability-up"></span><span class="rg-btn--availability-hover"></span>
+        <div class="icon__chevron-left"></div>
+        <div class="icon__chevron-left-active"></div>
+        <div class="icon__chevron-right"></div>
+        <div class="icon__chevron-right-active"></div>
+        <div class="icon__chevron-down"></div>
+        <div class="icon__chevron-down-active"></div>
+        <div class="icon__chevron-down-red"></div>
+        <div class="icon__calendar"></div>
+        <div class="icon__calendar-active"></div>
+        <div class="icon__availability"></div>
+        <div class="icon__availability-active"></div>
+        <div class="icon__zoom-plus"></div>
+        <div class="icon__zoom-minus"></div>
+        <div class="icon__zoom-bg"></div>
+        <div class="icon__zoom-toggle"></div>
+        <div class="icon_settings"></div>
+        <div class="icon_billing"></div>
+        <div class="icon_help"></div>
+        <div class="icon_logout"></div>
+    </div>
+    <div class="hide" id="modal"></div>
+    <div id="root">
+        <div id="header">
+            <nav class="main">
+                <ul class="left-menu">
+                    <li class=""><a href="https://testemrm.resourceguruapp.com/">Dashboard</a></li>
+                    <li class=""><a href="https://testemrm.resourceguruapp.com/schedule">Schedule</a></li>
+                    <li class=""><a href="https://testemrm.resourceguruapp.com/resources">Resources</a></li>
+                    <li class=""><a href="https://testemrm.resourceguruapp.com/projects">Projects</a></li>
+                    <li class="active"><a href="https://testemrm.resourceguruapp.com/clients">Clients</a></li>
+                    <li class=""><a href="https://testemrm.resourceguruapp.com/reports">Reports</a></li>
+                </ul>
+                <ul class="right-menu">
+                    <li class="dropdown is-header-dropdown has-chevron account_dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="current_account_name" title="emrm">emrm</span></a>
+                        <ul class="dropdown-menu">
+                            <li title="emrm"><a href="https://testemrm.resourceguruapp.com/">emrm</a></li>
+                        </ul>
+                    </li>
+                    <li class="guru_holder">
+                        <div class="guru_quote">Life is a journey, not a destination</div>
+                        <div class="guru_image_wrapper"><img alt="Image  guru" class="guru_image" src="/assets/companylogo.png" /></div>
+                    </li>
+                    <li class="dropdown is-header-dropdown user_dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Settings &amp; Help"><img alt="Thumb ff1b50bc a5bb 4512 b229 f03e7d99a898" class="current_user-avatar" src="https://resourceguru.s3.amazonaws.com/images/user/86770/image/thumb_ff1b50bc-a5bb-4512-b229-f03e7d99a898.jpg" /></a>
+                        <ul class="dropdown-menu has-icons">
+                            <li>
+                                <a href="https://testemrm.resourceguruapp.com/profile">
+                                    <div class="menu-icon icon_settings"></div>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://testemrm.resourceguruapp.com/billing">
+                                    <div class="menu-icon icon_billing"></div>
+                                    Billing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://testemrm.resourceguruapp.com/help" target="_blank">
+                                    <div class="menu-icon icon_help"></div>
+                                    Help
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://secure.resourceguruapp.com/logout">
+                                    <div class="menu-icon icon_logout"></div>
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="flash-holder">
+                <div id="flash"></div>
+                <script type="text/javascript">
+                  $('#flash .alert').each(function () { $(this).css('margin-top', '-30px').animate({ 'margin-top': 0 }, 300); });
+                  setTimeout(function () { $('#flash .alert').each(function () { $(this).animate({ 'margin-top': '-30px', 'opacity': '0' }, 450, function () { $(this).remove(); }); }); }, 3000);
+                </script>
+            </div>
+            <a class="header_notification" href="/billing">
+                <header>Purchase Now</header>
+                <p>Trial ends in <span class="notification_highlight">29 days</span></p>
+            </a>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="dropdown is-kebab-menu">
+                    <a class="dropdown-toggle has-tooltip" data-toggle="dropdown"></a>
+                    <ul class="dropdown-menu pull-right">
+                        <li class="active"><a href="https://testemrm.resourceguruapp.com/clients">Active Clients</a></li>
+                        <li class=""><a href="https://testemrm.resourceguruapp.com/clients?archived=1">Archived Clients</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group" style="float:right"><a class="btn btn-guru btn-large" data-remote="true" href="newClient.html"><i class="icon__btn-plus"></i>New Client</a></div>
+                <br style="clear:both" />
+                <div class="resource_list">
+                    <h1>C</h1>
+                    <ul>
+                        <li id="client_164141">
+                            <a data-remote="true" href="/clients/164141" title="client 2">
+                                <span class="colorbox" style="background-color: #bfbfbf"></span>
+                                <h2>client 2</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <h1>T</h1>
+                    <ul>
+                        <li id="client_164140">
+                            <a data-remote="true" href="/clients/164140" title="Test Client">
+                                <span class="colorbox" style="background-color: #ff9f80"></span>
+                                <h2>Test Client</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="root_footer"></div>
+    </div>
+    <div id="footer">
+        <div id="logo_foot">
+            <div class="container"><a href="http://resourceguruapp.com"><img alt="Logo footer" src="/assets/logo-footer-a785833ba3d4499eb9b2f452c7ffc170.png" /></a></div>
+        </div>
+        <div id="links_foot">
+            <div class="container">
+                <div class="row">
+                    <div class="span4" id="copyright">&copy; EMRM 2016. All rights reserved.</div>
+                    <nav class="span5">
+                        <li><a href="http://resourceguruapp.com/terms" target="_blank">Terms of Use</a></li>
+                        <li><a href="http://resourceguruapp.com/privacy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="http://resourceguruapp.com/acceptable-use" target="_blank">Acceptable Use Policy</a></li>
+                    </nav>
+                    <div class="span3" id="social_foot"><a class="socialicon socialicon-twitter" href="https://twitter.com/#!/resourceguruapp" target="_blank"></a><a class="socialicon socialicon-linkedin" href="http://www.linkedin.com/company/resource-guru" target="_blank"></a><a class="socialicon socialicon-facebook" href="https://www.facebook.com/ResourceGuru" target="_blank"></a><a class="socialicon socialicon-googleplus" href="https://plus.google.com/105630995265608472787/" target="_blank"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

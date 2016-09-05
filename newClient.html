@@ -1,0 +1,78 @@
+﻿<div id="newClient" class="modal">
+    <div class="modal-header">
+        <span class="ajax-spinner"></span><h1>New client</h1>
+    </div>
+    <div class="modal-body">
+        <div class="form">
+            <form accept-charset="UTF-8" action="/clients" class="simple_form form-horizontal" data-remote="true" id="new_client" method="post" novalidate="novalidate">
+                <div style="display: none">
+                    <input name="utf8" type="hidden" value="&#x2713;" />
+                </div><input id="source" name="source" type="hidden" />
+                <div class="form-inputs">
+                    <div class="control-group string required client_name">
+                        <div class="control-label">
+                            <label class="string required" for="client_name">Name <abbr title="required">*</abbr></label>
+                        </div>
+                        <div class="controls">
+                            <input class="string required" id="client_name" name="client[name]" type="text" />
+                        </div>
+                    </div>
+                    <div class="control-group color optional client_color">
+                        <div class="control-label">
+                            Color &nbsp;<i class='icon-info has-tooltip-top smallicon-information' title='Selecting a color will help you to easily identify this Client in the Schedule.'></i>
+                        </div>
+                        <div class="controls">
+                            <select class="color optional color-picker-select" id="client_color" name="client[color]">
+                                <option value=""></option>
+                                <option value="d5ded9">d5ded9</option>
+                                <option value="bfbfbf">bfbfbf</option>
+                                <option value="ece5ce">ece5ce</option>
+                                <option value="f1d4af">f1d4af</option>
+                                <option value="e8cb05">e8cb05</option>
+                                <option value="c68c00">c68c00</option>
+                                <option value="e08e79">e08e79</option>
+                                <option value="ffb400">ffb400</option>
+                                <option value="ff9f80">ff9f80</option>
+                                <option value="ff6600">ff6600</option>
+                                <option value="ef247f">ef247f</option>
+                                <option value="ea1414">ea1414</option>
+                                <option value="b70655">b70655</option>
+                                <option value="bb4b01">bb4b01</option>
+                                <option value="850505">850505</option>
+                                <option value="80056d">80056d</option>
+                                <option value="d818bb">d818bb</option>
+                                <option value="a675ff">a675ff</option>
+                                <option value="683db8">683db8</option>
+                                <option value="16287f">16287f</option>
+                                <option value="0264b0">0264b0</option>
+                                <option value="2654ea">2654ea</option>
+                                <option value="59b2f6">59b2f6</option>
+                                <option value="18cfd6">18cfd6</option>
+                                <option value="09ca7a">09ca7a</option>
+                                <option value="b9d020">b9d020</option>
+                                <option value="719004">719004</option>
+                                <option value="0e6c6f">0e6c6f</option>
+                                <option value="007f4b">007f4b</option>
+                                <option value="9c8803">9c8803</option>
+                            </select>
+                            <div class='btn-group color-picker'>
+                                <a href='#' class='btn dropdown-toggle' data-toggle='dropdown'><span class='selected-color'></span><span class='caret'></span></a><ul class='dropdown-menu color-palette'><li><a href='#' data-color='d5ded9' style='background-color: #d5ded9'>&nbsp</a></li><li><a href='#' data-color='bfbfbf' style='background-color: #bfbfbf'>&nbsp</a></li><li><a href='#' data-color='ece5ce' style='background-color: #ece5ce'>&nbsp</a></li><li><a href='#' data-color='f1d4af' style='background-color: #f1d4af'>&nbsp</a></li><li><a href='#' data-color='e8cb05' style='background-color: #e8cb05'>&nbsp</a></li><li><a href='#' data-color='c68c00' style='background-color: #c68c00'>&nbsp</a></li><li><a href='#' data-color='e08e79' style='background-color: #e08e79'>&nbsp</a></li><li><a href='#' data-color='ffb400' style='background-color: #ffb400'>&nbsp</a></li><li><a href='#' data-color='ff9f80' style='background-color: #ff9f80'>&nbsp</a></li><li><a href='#' data-color='ff6600' style='background-color: #ff6600'>&nbsp</a></li><li><a href='#' data-color='ef247f' style='background-color: #ef247f'>&nbsp</a></li><li><a href='#' data-color='ea1414' style='background-color: #ea1414'>&nbsp</a></li><li><a href='#' data-color='b70655' style='background-color: #b70655'>&nbsp</a></li><li><a href='#' data-color='bb4b01' style='background-color: #bb4b01'>&nbsp</a></li><li><a href='#' data-color='850505' style='background-color: #850505'>&nbsp</a></li><li><a href='#' data-color='80056d' style='background-color: #80056d'>&nbsp</a></li><li><a href='#' data-color='d818bb' style='background-color: #d818bb'>&nbsp</a></li><li><a href='#' data-color='a675ff' style='background-color: #a675ff'>&nbsp</a></li><li><a href='#' data-color='683db8' style='background-color: #683db8'>&nbsp</a></li><li><a href='#' data-color='16287f' style='background-color: #16287f'>&nbsp</a></li><li><a href='#' data-color='0264b0' style='background-color: #0264b0'>&nbsp</a></li><li><a href='#' data-color='2654ea' style='background-color: #2654ea'>&nbsp</a></li><li><a href='#' data-color='59b2f6' style='background-color: #59b2f6'>&nbsp</a></li><li><a href='#' data-color='18cfd6' style='background-color: #18cfd6'>&nbsp</a></li><li><a href='#' data-color='09ca7a' style='background-color: #09ca7a'>&nbsp</a></li><li><a href='#' data-color='b9d020' style='background-color: #b9d020'>&nbsp</a></li><li><a href='#' data-color='719004' style='background-color: #719004'>&nbsp</a></li><li><a href='#' data-color='0e6c6f' style='background-color: #0e6c6f'>&nbsp</a></li><li><a href='#' data-color='007f4b' style='background-color: #007f4b'>&nbsp</a></li><li><a href='#' data-color='9c8803' style='background-color: #9c8803'>&nbsp</a></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group text optional client_notes">
+                        <div class="control-label">
+                            <label class="text optional" for="client_notes">Notes</label>
+                        </div>
+                        <div class="controls">
+                            <textarea class="text optional" id="client_notes" name="client[notes]"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <input class="btn btn btn-guru btn-large" data-disable-with="Busy, please wait..." name="commit" type="submit" value="Add Client" />&nbsp;<button class="btn btn-large" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

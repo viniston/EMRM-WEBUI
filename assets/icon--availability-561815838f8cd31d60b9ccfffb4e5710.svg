@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>icon--availability</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--availability" fill="#7A7A7A">
+            <polygon id="Shape" points="20 4 20 2 4 2 4 5 20 5"></polygon>
+            <polygon id="Shape" points="0 2 0 5 3 5 3 2"></polygon>
+            <polygon id="Shape" points="0 10 0 8 3 8 3 11 0 11"></polygon>
+            <polygon id="Shape" points="5.14285714 8 4 8 4 11 20 11 20 8"></polygon>
+            <polygon id="Shape" points="10.8571429 14 4 14 4 17 20 17 20 14"></polygon>
+            <polygon id="Shape" points="0 15 0 14 3 14 3 17 0 17"></polygon>
+        </g>
+    </g>
+</svg>

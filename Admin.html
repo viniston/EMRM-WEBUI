@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html class="chrome52">
+<head>
+    <title>Resource Guru</title>
+    <noscript>
+        <meta content="0;url=https://testemrm.resourceguruapp.com/javascript_disabled" http-equiv="refresh" />
+    </noscript>
+    <link href="/assets/application-77aedbda1f36fe09d63c69b87496b7fc.css" media="screen" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Sans+Caption:400,700|Economica:400,700|PT+Sans+Caption+Bold|PT+Sans+Narrow" media="screen" rel="stylesheet" />
+    <script type="text/javascript"></script>
+    <script src="/assets/application-3005c307bfc06e9ec84e97784764091c.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="EJcWYazK77a690nPcXVrGdulLeK3jF+OVKcggmOvgD8=" name="csrf-token" />
+</head>
+<body class="applayout clients">
+    <div class="prefetch" style="position:fixed; left: -9999px; opacity: 0">
+        <i class="rg-ion-ios-trash"></i><i class="rg-ion-edit"></i><i class="rg-ion-scissors"></i><i class="rg-ion-android-time"></i><i class="rg-ion-chevron-down"></i><i class="rg-ion-gear-a"></i><i class="rg-icon--sick"></i><i class="rg-icon--maternity"></i><i class="rg-icon--training"></i><i class="rg-icon--compassionate"></i><i class="rg-icon--vacation"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar"></i><i class="rg-icon--happy"></i><i class="rg-icon--contacts"></i>
+        <div class="is-icon-link"><i class="rg-icon--calendar"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar is-hovered"></i></div>
+        <span class="rg-btn--availability-down"></span><span class="rg-btn--availability-up"></span><span class="rg-btn--availability-hover"></span>
+        <div class="icon__chevron-left"></div>
+        <div class="icon__chevron-left-active"></div>
+        <div class="icon__chevron-right"></div>
+        <div class="icon__chevron-right-active"></div>
+        <div class="icon__chevron-down"></div>
+        <div class="icon__chevron-down-active"></div>
+        <div class="icon__chevron-down-red"></div>
+        <div class="icon__calendar"></div>
+        <div class="icon__calendar-active"></div>
+        <div class="icon__availability"></div>
+        <div class="icon__availability-active"></div>
+        <div class="icon__zoom-plus"></div>
+        <div class="icon__zoom-minus"></div>
+        <div class="icon__zoom-bg"></div>
+        <div class="icon__zoom-toggle"></div>
+        <div class="icon_settings"></div>
+        <div class="icon_billing"></div>
+        <div class="icon_help"></div>
+        <div class="icon_logout"></div>
+    </div>
+    <div class="hide" id="modal"></div>
+    <div id="root">
+        <div id="header">
+            <nav class="main">
+                <ul class="left-menu">
+                    <li class=""><a href="Home.html">Dashboard</a></li>
+                    <li class=""><a href="schedule.html">Schedule</a></li>
+                    <li class=""><a href="resources.html">Resources</a></li>
+                    <li class=""><a href="projects.html">Projects</a></li>
+                    <li class="active"><a href="Clients.html">Clients</a></li>
+                    <li class=""><a href="reports.html">Reports</a></li>
+                </ul>
+                <ul class="right-menu">
+                    <li class="dropdown is-header-dropdown has-chevron account_dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="current_account_name" title="emrm">emrm</span></a>
+                        <ul class="dropdown-menu">
+                            <li title="emrm"><a href="/">emrm</a></li>
+                        </ul>
+                    </li>
+                    <li class="guru_holder">
+                        <div class="guru_quote">Life is a journey, not a destination</div>
+                        <div class="guru_image_wrapper"><img alt="Image  guru" class="guru_image" src="/assets/companylogo.png" /></div>
+                    </li>
+                    <li class="dropdown is-header-dropdown user_dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Settings &amp; Help"><img alt="Thumb ff1b50bc a5bb 4512 b229 f03e7d99a898" class="current_user-avatar" src="https://resourceguru.s3.amazonaws.com/images/user/86770/image/thumb_ff1b50bc-a5bb-4512-b229-f03e7d99a898.jpg" /></a>
+                        <ul class="dropdown-menu has-icons">
+                            <li>
+                                <a href="/profile">
+                                    <div class="menu-icon icon_settings"></div>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/billing">
+                                    <div class="menu-icon icon_billing"></div>
+                                    Billing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/help" target="_blank">
+                                    <div class="menu-icon icon_help"></div>
+                                    Help
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/logout">
+                                    <div class="menu-icon icon_logout"></div>
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="flash-holder">
+                <div id="flash"></div>
+            </div>
+            <a class="header_notification" href="/billing">
+                <header>Purchase Now</header>
+                <p>Trial ends in <span class="notification_highlight">29 days</span></p>
+            </a>
+        </div>
+        <div id="content">
+            <div class="container">
+                <!--Content goes here-->
+            </div>
+        </div>
+        <div id="root_footer"></div>
+    </div>
+    <div id="footer">
+        <div id="logo_foot">
+            <div class="container"><a href="/"><img alt="Logo footer" src="/assets/logo-footer-a785833ba3d4499eb9b2f452c7ffc170.png" /></a></div>
+        </div>
+        <div id="links_foot">
+            <div class="container">
+                <div class="row">
+                    <div class="span4" id="copyright">&copy; EMRM 2016. All rights reserved.</div>
+                    <nav class="span5">
+                        <li><a href="/terms" target="_blank">Terms of Use</a></li>
+                        <li><a href="/privacy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="/acceptable-use" target="_blank">Acceptable Use Policy</a></li>
+                    </nav>
+                    <div class="span3" id="social_foot"><a class="socialicon socialicon-twitter" href="https://twitter.com/#!/resourceguruapp" target="_blank"></a><a class="socialicon socialicon-linkedin" href="http://www.linkedin.com/company/resource-guru" target="_blank"></a><a class="socialicon socialicon-facebook" href="https://www.facebook.com/ResourceGuru" target="_blank"></a><a class="socialicon socialicon-googleplus" href="https://plus.google.com/105630995265608472787/" target="_blank"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
