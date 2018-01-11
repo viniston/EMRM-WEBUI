@@ -1,0 +1,1637 @@
+﻿/* ----------------------------------------- */
+/* codemirror.css */
+/* ----------------------------------------- */
+
+/* BASICS */
+
+.CodeMirror {
+    /* Set height, width, borders, and global font properties here */
+    font-family: monospace;
+    height: 300px;
+    color: black;
+}
+
+/* PADDING */
+
+.CodeMirror-lines {
+    padding: 4px 0; /* Vertical padding around content */
+}
+
+.CodeMirror pre {
+    padding: 0 4px; /* Horizontal padding of content */
+}
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    background-color: white; /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+    background-color: #f7f7f7;
+    white-space: nowrap;
+}
+
+.CodeMirror-linenumbers {
+}
+
+.CodeMirror-linenumber {
+    padding: 0 3px 0 5px;
+    min-width: 20px;
+    text-align: right;
+    color: #999;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.CodeMirror-guttermarker {
+    color: black;
+}
+
+.CodeMirror-guttermarker-subtle {
+    color: #999;
+}
+
+/* CURSOR */
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid black;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+    border-left: 1px solid silver;
+}
+
+.CodeMirror.cm-fat-cursor div.CodeMirror-cursor {
+    width: auto;
+    border: 0;
+    background: #7e7;
+}
+
+.CodeMirror.cm-fat-cursor div.CodeMirror-cursors {
+    z-index: 1;
+}
+
+.cm-animate-fat-cursor {
+    width: auto;
+    border: 0;
+    -webkit-animation: blink 1.06s steps(1) infinite;
+    -moz-animation: blink 1.06s steps(1) infinite;
+    animation: blink 1.06s steps(1) infinite;
+}
+
+@-moz-keyframes blink {
+    0% {
+        background: #7e7;
+    }
+
+    50% {
+        background: none;
+    }
+
+    100% {
+        background: #7e7;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        background: #7e7;
+    }
+
+    50% {
+        background: none;
+    }
+
+    100% {
+        background: #7e7;
+    }
+}
+
+@keyframes blink {
+    0% {
+        background: #7e7;
+    }
+
+    50% {
+        background: none;
+    }
+
+    100% {
+        background: #7e7;
+    }
+}
+
+/* Can style cursor different in overwrite (non-insert) mode */
+div.CodeMirror-overwrite div.CodeMirror-cursor {
+}
+
+.cm-tab {
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+.CodeMirror-ruler {
+    border-left: 1px solid #ccc;
+    position: absolute;
+}
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-keyword {
+    color: #708;
+}
+
+.cm-s-default .cm-atom {
+    color: #219;
+}
+
+.cm-s-default .cm-number {
+    color: #164;
+}
+
+.cm-s-default .cm-def {
+    color: #00f;
+}
+
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {
+}
+
+.cm-s-default .cm-variable-2 {
+    color: #05a;
+}
+
+.cm-s-default .cm-variable-3 {
+    color: #085;
+}
+
+.cm-s-default .cm-comment {
+    color: #a50;
+}
+
+.cm-s-default .cm-string {
+    color: #a11;
+}
+
+.cm-s-default .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-default .cm-meta {
+    color: #555;
+}
+
+.cm-s-default .cm-qualifier {
+    color: #555;
+}
+
+.cm-s-default .cm-builtin {
+    color: #30a;
+}
+
+.cm-s-default .cm-bracket {
+    color: #997;
+}
+
+.cm-s-default .cm-tag {
+    color: #170;
+}
+
+.cm-s-default .cm-attribute {
+    color: #00c;
+}
+
+.cm-s-default .cm-header {
+    color: blue;
+}
+
+.cm-s-default .cm-quote {
+    color: #090;
+}
+
+.cm-s-default .cm-hr {
+    color: #999;
+}
+
+.cm-s-default .cm-link {
+    color: #00c;
+}
+
+.cm-negative {
+    color: #d44;
+}
+
+.cm-positive {
+    color: #292;
+}
+
+.cm-header, .cm-strong {
+    font-weight: bold;
+}
+
+.cm-em {
+    font-style: italic;
+}
+
+.cm-link {
+    text-decoration: underline;
+}
+
+.cm-strikethrough {
+    text-decoration: line-through;
+}
+
+.cm-s-default .cm-error {
+    color: #f00;
+}
+
+.cm-invalidchar {
+    color: #f00;
+}
+
+/* Default styles for common addons */
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #0f0;
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #f22;
+}
+
+.CodeMirror-matchingtag {
+    background: rgba(255, 150, 0, .3);
+}
+
+.CodeMirror-activeline-background {
+    background: #e8f2ff;
+}
+
+/* STOP */
+
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+
+.CodeMirror {
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+.CodeMirror-scroll {
+    overflow: scroll;
+    /* 30px is the magic margin used to hide the element's real scrollbars */
+    /* See overflow: hidden in .CodeMirror */
+    margin-bottom: -30px;
+    margin-right: -30px;
+    padding-bottom: 30px;
+    height: 100%;
+    outline: none; /* Prevent dragging from highlighting the element */
+    position: relative;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.CodeMirror-sizer {
+    position: relative;
+    border-right: 30px solid transparent;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actuall scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    position: absolute;
+    z-index: 6;
+    display: none;
+}
+
+.CodeMirror-vscrollbar {
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.CodeMirror-hscrollbar {
+    bottom: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.CodeMirror-scrollbar-filler {
+    right: 0;
+    bottom: 0;
+}
+
+.CodeMirror-gutter-filler {
+    left: 0;
+    bottom: 0;
+}
+
+.CodeMirror-gutters {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.CodeMirror-gutter {
+    white-space: normal;
+    height: 100%;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    margin-bottom: -30px;
+    /* Hack to make IE7 behave */
+    *zoom: 1;
+    *display: inline;
+}
+
+.CodeMirror-gutter-wrapper {
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+}
+
+.CodeMirror-gutter-elt {
+    position: absolute;
+    cursor: default;
+    z-index: 4;
+}
+
+.CodeMirror-gutter-wrapper {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.CodeMirror-lines {
+    cursor: text;
+    min-height: 1px; /* prevents collapsing before first draw */
+}
+
+.CodeMirror pre {
+    /* Reset some styles that the rest of the page might have set */
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border-width: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    white-space: pre;
+    word-wrap: normal;
+    line-height: inherit;
+    color: inherit;
+    z-index: 2;
+    position: relative;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.CodeMirror-wrap pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+}
+
+.CodeMirror-linebackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.CodeMirror-linewidget {
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+}
+
+.CodeMirror-widget {
+}
+
+.CodeMirror-code {
+    outline: none;
+}
+
+.CodeMirror-measure {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+    .CodeMirror-measure pre {
+        position: static;
+    }
+
+.CodeMirror div.CodeMirror-cursor {
+    position: absolute;
+    border-right: none;
+    width: 0;
+}
+
+div.CodeMirror-cursors {
+    visibility: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.CodeMirror-focused div.CodeMirror-cursors {
+    visibility: visible;
+}
+
+.CodeMirror-selected {
+    background: #d9d9d9;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: #d7d4f0;
+}
+
+.CodeMirror-crosshair {
+    cursor: crosshair;
+}
+
+.CodeMirror ::selection {
+    background: #d7d4f0;
+}
+
+.CodeMirror ::-moz-selection {
+    background: #d7d4f0;
+}
+
+.cm-searching {
+    background: #ffa;
+    background: rgba(255, 255, 0, .4);
+}
+
+/* IE7 hack to prevent it from returning funny offsetTops on the spans */
+.CodeMirror span {
+    *vertical-align: text-bottom;
+}
+
+/* Used to force a border model for a node */
+.cm-force-border {
+    padding-right: .1px;
+}
+
+@media print {
+    /* Hide the cursor when printing */
+    .CodeMirror div.CodeMirror-cursors {
+        visibility: hidden;
+    }
+}
+
+/* See issue #2901 */
+.cm-tab-wrap-hack:after {
+    content: '';
+}
+
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext {
+    background: none;
+}
+
+.misprint {
+    position: relative;
+    border-bottom: 1px dotted red;
+}
+
+.misprint-suggestions {
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0 0 0 -1em;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    font-family: 'Segoe UI', 'lucida grande', arial, verdana, 'lucida sans unicode', tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1em;
+}
+
+    .misprint-suggestions li {
+        margin: 0;
+        padding: 0.5em 1em;
+        min-width: 6em;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+        .misprint-suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+
+.CodeMirror.nocursor .CodeMirror-cursors {
+    display: none;
+}
+/* ----------------------------------------- */
+/* theme.css */
+/* ----------------------------------------- */
+
+.cm-bold {
+    font-weight: bold;
+}
+
+.cm-italic {
+    font-style: italic;
+}
+
+.cm-underline {
+    text-decoration: underline;
+}
+
+.cm-strikethrough {
+    text-decoration: line-through;
+}
+
+.cm-lmkr {
+    visibility: hidden;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    /*display: none;*/
+}
+
+.user-cursor {
+    font-family: 'Segoe UI', 'Arial', 'sans-serif';
+    position: relative;
+    z-index: 9000;
+}
+
+    .user-cursor.user-cursor-selection {
+        position: static;
+    }
+
+        .user-cursor.user-cursor-selection:before {
+            display: none;
+        }
+
+        .user-cursor.user-cursor-selection.user-cursor-name:after {
+            left: auto;
+            margin-left: -1px;
+        }
+
+.CodeMirror-widget .handsontable {
+    margin-top: 10px;
+}
+/* ----------------------------------------- */
+/* images.css */
+/* ----------------------------------------- */
+
+.imagewrapper-wrap {
+    min-width: 56px;
+    min-height: 56px;
+    line-height: 100%;
+    font-size: 41px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 5px !important;
+    margin: 0 10px 5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f2f2f2));
+    background: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
+    *background-color: f2f2f2;
+    cursor: pointer !important;
+}
+
+    .imagewrapper-wrap:hover {
+        border-color: #D6D6D6;
+    }
+
+    .imagewrapper-wrap img {
+        cursor: pointer !important;
+    }
+
+.imagewrapper-clean {
+    max-width: 97%;
+    display: inline-block;
+    padding: 6px;
+    min-width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+    .imagewrapper-clean img {
+        max-width: 100%;
+        margin-top: 6px;
+    }
+
+.ep-image-bubble-pimp {
+    width: 27px;
+    height: 27px;
+    background: url('/i/liveeditor-image-resize-sprite.png') 0px 0px no-repeat;
+    cursor: pointer;
+    text-align: center;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: ignore;
+    font-size: 10px;
+}
+
+    .ep-image-bubble-pimp:hover {
+        background: url('/i/liveeditor-image-resize-sprite.png') 0px -30px no-repeat;
+    }
+
+.ep-images-bubble {
+    z-index: 600;
+    top: -200px;
+    position: absolute;
+    font-family: "Segoe UI","lucida grande",arial,verdana,"lucida sans unicode",tahoma,sans-serif !important;
+}
+
+    .ep-images-bubble.menu-shown .ep-image-bubble-pimp {
+        border-bottom: none !important;
+    }
+
+    .ep-images-bubble.menu-shown .ep-image-bubble-menu {
+        display: block;
+    }
+
+.ep-image-bubble-menu {
+    cursor: default;
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+    top: 0px;
+    width: 100px;
+    border: 1px solid #d5d5d5;
+    background-color: #fff;
+}
+
+    .ep-image-bubble-menu a {
+        cursor: pointer;
+        font-size: 13px;
+        padding: 5px 7px;
+        text-decoration: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: ignore;
+        display: block;
+        line-height: 23px;
+        color: #000;
+        text-decoration: none;
+        border: 1px solid transparent;
+    }
+
+        .ep-image-bubble-menu a:hover {
+            border: 1px solid #5489b9;
+            background-color: #64a4dd;
+            color: #e4ffff;
+            text-shadow: 0 1px #4b71b4;
+            text-decoration: none !important;
+        }
+
+        .ep-image-bubble-menu a span {
+            display: inline-block;
+            margin-right: 9px;
+            width: 18px;
+            height: 15px;
+            margin-bottom: -3px;
+            cursor: pointer;
+        }
+
+        .ep-image-bubble-menu a i {
+            font-style: normal;
+        }
+
+        .ep-image-bubble-menu a.ep-images-bubble-enlarge span {
+            background: url('/i/liveeditor-image-resize-sprite.png') -1px -186px no-repeat;
+        }
+
+        .ep-image-bubble-menu a.ep-images-bubble-enlarge:hover span {
+            background: url('/i/liveeditor-image-resize-sprite.png') -1px -211px no-repeat;
+        }
+
+    .ep-image-bubble-menu .ep-images-bubble-preview span {
+        background: url('/i/liveeditor-image-resize-sprite.png') 0px -240px no-repeat !important;
+    }
+
+    .ep-image-bubble-menu .ep-images-bubble-preview:hover span {
+        background: url('/i/liveeditor-image-resize-sprite.png') -1px -270px no-repeat !important;
+    }
+
+    .ep-image-bubble-menu .ep-images-bubble-enlarge-minimize span {
+        background: url('/i/liveeditor-image-resize-sprite.png') 0px -69px no-repeat !important;
+    }
+
+    .ep-image-bubble-menu .ep-images-bubble-enlarge-minimize:hover span {
+        background: url('/i/liveeditor-image-resize-sprite.png') 0px -97px no-repeat !important;
+    }
+
+    .ep-image-bubble-menu a.ep-images-bubble-remove span {
+        background: url('/i/liveeditor-image-resize-sprite.png') -2px -127px no-repeat;
+    }
+
+    .ep-image-bubble-menu a.ep-images-bubble-remove:hover span {
+        background: url('/i/liveeditor-image-resize-sprite.png') -2px -156px no-repeat;
+    }
+
+    .ep-image-bubble-menu a:visited {
+        color: #000;
+    }
+
+.etherpad-loader {
+    border: 1px solid #e6e6e6;
+    height: 50px;
+    padding: 5px;
+    width: 110px;
+    display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f2f2f2));
+    background: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
+    *background-color: f2f2f2;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+    .etherpad-loader .etherpad-loader-bar {
+        display: block;
+        height: 10px;
+        margin-top: 20px;
+        width: 0%;
+        background: -moz-linear-gradient(100% 100% 90deg, #114AFF, #3F85FF);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3F85FF), to(#114AFF));
+    }
+/* ----------------------------------------- */
+/* headings.css */
+/* ----------------------------------------- */
+
+.cm-heading-h1 {
+    font-size: 2em !important;
+    padding-top: 0.67em;
+    line-height: 1.7em !important;
+    font-weight: bold;
+}
+
+.cm-heading-h2 {
+    font-size: 1.5em !important;
+    padding-top: 0.83em;
+    line-height: 1.5em !important;
+    font-weight: bold;
+}
+
+.cm-heading-h3 {
+    font-size: 1.17em !important;
+    padding-top: 1em;
+    font-weight: bold;
+}
+
+.cm-heading-h4 {
+    padding-top: 1.33em;
+    font-weight: bold;
+}
+
+.cm-heading-h5 {
+    font-size: .83em !important;
+    padding-top: 1.67em;
+    font-weight: bold;
+}
+
+.cm-heading-h6 {
+    font-size: .75em !important;
+    padding-top: 2.33em;
+    font-weight: bold;
+}
+/* ----------------------------------------- */
+/* tasklist.css */
+/* ----------------------------------------- */
+
+.cm-tasklist.cm-tasklist-not-done, .cm-tasklist.cm-tasklist-done {
+    list-style-type: none !important;
+    padding-left: 1.5em !important;
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    cursor: pointer !important;
+    outline: none !important;
+}
+
+.cm-tasklist.cm-tasklist-not-done {
+    background-image: url('/i/button/tasklist.png');
+}
+
+.cm-tasklist.cm-tasklist-done {
+    opacity: .6;
+    background-image: url('/i/button/tasklist-done.png');
+}
+/* ----------------------------------------- */
+/* colors.css */
+/* ----------------------------------------- */
+
+.cm-color {
+    color: #000;
+}
+
+.cm-color-CEA70A {
+    background-color: rgba(206, 167, 10, 0.5);
+}
+
+.cm-color-2985E0 {
+    background-color: rgba(41, 133, 224, 0.5);
+}
+
+.cm-color-E40505 {
+    background-color: rgba(228, 5, 5, 0.5);
+}
+
+.cm-color-9244F0 {
+    background-color: rgba(146, 68, 240, 0.5);
+}
+
+.cm-color-6ABB11 {
+    background-color: rgba(106, 187, 17, 0.5);
+}
+
+.cm-color-000000 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cm-color-FFFFFF {
+    color: #000 !important;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* ----------------------------------------- */
+/* links.css */
+/* ----------------------------------------- */
+
+.cm-link {
+    cursor: pointer;
+}
+
+.ep-links-bubble {
+    background-color: #FFFFFF;
+    border-color: #BBBBBB #BBBBBB #A8A8A8;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: #666666;
+    cursor: default;
+    padding: 12px 20px;
+    position: absolute;
+    z-index: 550;
+    white-space: nowrap;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: ignore;
+    resize: none;
+    -webkit-user-modify: read-only;
+    -moz-user-modify: read-only;
+}
+
+    .ep-links-bubble a, .ep-links-bubble-link {
+        color: #1155CC;
+        cursor: pointer;
+        font-family: Arial,sans-serif;
+        font-size: 13px;
+        text-decoration: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: ignore;
+    }
+
+        .ep-links-bubble a:hover, .ep-links-bubble-link:hover {
+            text-decoration: underline;
+        }
+
+        .ep-links-bubble a:visited {
+            color: #1155CC;
+        }
+/* ----------------------------------------- */
+/* lists.css */
+/* ----------------------------------------- */
+
+.cm-list-reset-number1 {
+    counter-reset: num1;
+}
+
+.cm-list-reset-number2 {
+    counter-reset: num2;
+}
+
+.cm-list-reset-number3 {
+    counter-reset: num3;
+}
+
+.cm-list-reset-number4 {
+    counter-reset: num4;
+}
+
+.cm-list-reset-number5 {
+    counter-reset: num5;
+}
+
+.cm-list-reset-number6 {
+    counter-reset: num6;
+}
+
+.cm-list-reset-number7 {
+    counter-reset: num7;
+}
+
+.cm-list-reset-number8 {
+    counter-reset: num8;
+}
+
+.cm-list-number:before {
+    position: absolute;
+    text-align: right;
+    width: 23px;
+    display: block;
+    padding-right: 3px;
+}
+
+.cm-list-number1:before {
+    content: counter(num1,decimal) ". ";
+    counter-increment: num1; /* Add 1 to chapter */
+    left: -0.3em;
+}
+
+.cm-list-number2:before {
+    content: counter(num2,lower-alpha) ". ";
+    counter-increment: num2; /* Add 1 to chapter */
+    left: 1.2em;
+}
+
+.cm-list-number3:before {
+    content: counter(num3,lower-roman) ". ";
+    counter-increment: num3; /* Add 1 to chapter */
+    left: 2.7em;
+}
+
+.cm-list-number4:before {
+    content: counter(num4,decimal) ". ";
+    counter-increment: num4; /* Add 1 to chapter */
+    left: 4.2em;
+}
+
+.cm-list-number5:before {
+    content: counter(num5,lower-alpha) ". ";
+    counter-increment: num5; /* Add 1 to chapter */
+    left: 5.7em;
+}
+
+.cm-list-number6:before {
+    content: counter(num6,lower-roman) ". ";
+    counter-increment: num6; /* Add 1 to chapter */
+    left: 7.2em;
+}
+
+.cm-list-number7:before {
+    content: counter(num7,decimal) ". ";
+    counter-increment: num7; /* Add 1 to chapter */
+    left: 8.7em;
+}
+
+.cm-list-number8:before {
+    content: counter(num8,lower-alpha) ". ";
+    counter-increment: num8; /* Add 1 to chapter */
+    left: 10.2em;
+}
+
+.cm-list-number1 {
+    padding-left: 1.9em !important;
+}
+
+.cm-list-number2 {
+    padding-left: 3.4em !important;
+}
+
+.cm-list-number3 {
+    padding-left: 4.9em !important;
+}
+
+.cm-list-number4 {
+    padding-left: 6.4em !important;
+}
+
+.cm-list-number5 {
+    padding-left: 7.9em !important;
+}
+
+.cm-list-number6 {
+    padding-left: 9.4em !important;
+}
+
+.cm-list-number7 {
+    padding-left: 10.9em !important;
+}
+
+.cm-list-number8 {
+    padding-left: 12.4em !important;
+}
+
+.cm-list-bullet1 {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0.7em !important;
+}
+
+.cm-list-bullet2 {
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 2.5em !important;
+    ;
+}
+
+.cm-list-bullet3 {
+    display: list-item;
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 4em !important;
+}
+
+.cm-list-bullet4 {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 5.5em !important;
+}
+
+.cm-list-bullet5 {
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 7em !important;
+}
+
+.cm-list-bullet6 {
+    display: list-item;
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 8.5em !important;
+}
+
+.cm-list-bullet7 {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 10em !important;
+}
+
+.cm-list-bullet8 {
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 11.5em !important;
+}
+
+.cm-list-indent1 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 1.7em !important;
+}
+
+.cm-list-indent2 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 3.6em !important;
+}
+
+.cm-list-indent3 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 5.1em !important;
+}
+
+.cm-list-indent4 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 6.6em !important;
+}
+
+.cm-list-indent5 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 8.1em !important;
+}
+
+.cm-list-indent6 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 9.6em !important;
+}
+
+.cm-list-indent7 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 11.1em !important;
+}
+
+.cm-list-indent8 {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 12.6em !important;
+}
+
+
+/* ----------------------------------------- */
+/* jquery.handsontable.full.css */
+/* ----------------------------------------- */
+
+/**
+ * Handsontable 0.10.1
+ * Handsontable is a simple jQuery plugin for editable tables with basic copy-paste compatibility with Excel and Google Docs
+ *
+ * Copyright 2012, Marcin Warpechowski
+ * Licensed under the MIT license.
+ * http://handsontable.com/
+ *
+ * Date: Sun Jan 12 2014 13:55:41 GMT+0100 (Central European Standard Time)
+ */
+
+.handsontable {
+    position: relative;
+}
+
+    .handsontable.htAutoColumnSize {
+        visibility: hidden;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .handsontable table,
+    .handsontable tbody,
+    .handsontable thead,
+    .handsontable td,
+    .handsontable th,
+    .handsontable div {
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+    }
+
+        .handsontable table.htCore {
+            border-collapse: separate;
+            /*it must be separate, otherwise there are offset miscalculations in WebKit: http://stackoverflow.com/questions/2655987/border-collapse-differences-in-ff-and-webkit*/
+            position: relative;
+            /*this actually only changes appearance of user selection - does not make text unselectable
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  /*user-select: none; /*no browser supports unprefixed version*/
+            border-spacing: 0;
+            margin: 0;
+            border-width: 0;
+            table-layout: fixed;
+            width: 0;
+            outline-width: 0;
+            /* reset bootstrap table style. for more info see: https://github.com/warpech/jquery-handsontable/issues/224 */
+            max-width: none;
+            max-height: none;
+        }
+
+    .handsontable col {
+        width: 50px;
+    }
+
+        .handsontable col.rowHeader {
+            width: 50px;
+        }
+
+    .handsontable th,
+    .handsontable td {
+        border-right: 1px solid #CCC;
+        border-bottom: 1px solid #CCC;
+        height: 22px;
+        empty-cells: show;
+        line-height: 21px;
+        padding: 0 4px 0 4px;
+        /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+        background-color: #FFF;
+        vertical-align: top;
+        overflow: hidden;
+        outline-width: 0;
+        white-space: pre-line;
+        /* preserve new line character in cell */
+    }
+
+        .handsontable td.htInvalid {
+            -webkit-transition: background 0.75s ease;
+            transition: background 0.75s ease;
+            background-color: #ff4c42;
+        }
+
+        .handsontable th:last-child {
+            /*Foundation framework fix*/
+            border-right: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+        }
+
+        .handsontable tr:first-child th.htNoFrame,
+        .handsontable th:first-child.htNoFrame,
+        .handsontable th.htNoFrame {
+            border-left-width: 0;
+            background-color: white;
+            border-color: #FFF;
+        }
+
+        .handsontable th:first-child,
+        .handsontable td:first-child,
+        .handsontable .htNoFrame + th,
+        .handsontable .htNoFrame + td {
+            border-left: 1px solid #CCC;
+        }
+
+    .handsontable tr:first-child th,
+    .handsontable tr:first-child td {
+        border-top: 1px solid #CCC;
+    }
+
+    .handsontable thead tr:last-child th {
+        border-bottom-width: 0;
+    }
+
+    .handsontable thead tr.lastChild th {
+        border-bottom-width: 0;
+    }
+
+    .handsontable th {
+        background-color: #EEE;
+        color: #222;
+        text-align: center;
+        font-weight: normal;
+        white-space: nowrap;
+    }
+
+    .handsontable thead th {
+        padding: 0;
+    }
+
+    .handsontable th.active {
+        background-color: #CCC;
+    }
+
+    .handsontable thead th .relative {
+        position: relative;
+        padding: 2px 4px;
+    }
+
+    /* plugins */
+
+    .handsontable .manualColumnMover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        width: 5px;
+        height: 25px;
+        z-index: 999;
+        cursor: move;
+    }
+
+    .handsontable th .manualColumnMover:hover,
+    .handsontable th .manualColumnMover.active {
+        background-color: #88F;
+    }
+
+    .handsontable .manualColumnResizer {
+        position: absolute;
+        top: 0;
+        cursor: col-resize;
+    }
+
+    .handsontable .manualColumnResizerHandle {
+        background-color: transparent;
+        width: 5px;
+        height: 25px;
+    }
+
+    .handsontable .manualColumnResizer:hover .manualColumnResizerHandle,
+    .handsontable .manualColumnResizer.active .manualColumnResizerHandle {
+        background-color: #AAB;
+    }
+
+    .handsontable .manualColumnResizerLine {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #AAB;
+        display: none;
+        width: 0;
+        border-right: 1px dashed #777;
+    }
+
+    .handsontable .manualColumnResizer.active .manualColumnResizerLine {
+        display: block;
+    }
+
+    .handsontable .columnSorting:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /* border line */
+
+    .handsontable .wtBorder {
+        position: absolute;
+        font-size: 0;
+    }
+
+    .handsontable td.area {
+        background-color: #EEF4FF;
+    }
+
+    /* fill handle */
+
+    .handsontable .wtBorder.corner {
+        font-size: 0;
+        cursor: crosshair;
+    }
+
+    .handsontable .htBorder.htFillBorder {
+        background: red;
+        width: 1px;
+        height: 1px;
+    }
+
+.handsontableInput {
+    border: 2px solid #5292F7;
+    outline-width: 0;
+    margin: 0;
+    padding: 1px 4px 0 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*repeat from .handsontable (inherit doesn't work with IE<8) */
+    line-height: 1.3em;
+    /*repeat from .handsontable (inherit doesn't work with IE<8) */
+    font-size: inherit;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    resize: none;
+    /*below are needed to overwrite stuff added by jQuery UI Bootstrap theme*/
+    display: inline-block;
+    color: #000;
+    border-radius: 0;
+    background-color: #FFF;
+    /*overwrite styles potentionally made by a framework*/
+}
+
+.handsontableInputHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.htSelectEditor {
+    -webkit-appearance: menulist-button !important;
+    position: absolute;
+}
+
+/*
+TextRenderer readOnly cell
+*/
+
+.handsontable .htDimmed {
+    color: #777;
+}
+
+/*
+TextRenderer placeholder value
+*/
+
+.handsontable .htPlaceholder {
+    color: #999;
+}
+
+/*
+AutocompleteRenderer down arrow
+*/
+
+.handsontable .htAutocompleteArrow {
+    float: right;
+    font-size: 10px;
+    color: #EEE;
+    cursor: default;
+    width: 16px;
+    text-align: center;
+}
+
+.handsontable td .htAutocompleteArrow:hover {
+    color: #777;
+}
+
+/*
+CheckboxRenderer
+*/
+
+.handsontable .htCheckboxRendererInput.noValue {
+    opacity: 0.5;
+}
+
+/*
+NumericRenderer
+*/
+
+.handsontable .htNumeric {
+    text-align: right;
+}
+
+/*context menu rules*/
+
+ul.context-menu-list {
+    color: black;
+}
+
+    ul.context-menu-list li {
+        margin-bottom: 0;
+        /*Foundation framework fix*/
+    }
+
+/**
+ * dragdealer
+ */
+
+.handsontable .dragdealer {
+    position: relative;
+    width: 9px;
+    height: 9px;
+    background: #F8F8F8;
+    border: 1px solid #DDD;
+}
+
+    .handsontable .dragdealer .handle {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background: #C5C5C5;
+    }
+
+    .handsontable .dragdealer .disabled {
+        background: #898989;
+    }
+
+/**
+ * Handsontable in Handsontable
+ */
+
+.handsontable .handsontable .wtHider {
+    padding: 0 0 5px 0;
+}
+
+.handsontable .handsontable table {
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/**
+ * Handsontable listbox theme
+ */
+
+.handsontable.listbox {
+    margin: 0;
+}
+
+    .handsontable.listbox table {
+        border: 1px solid #ccc;
+        border-collapse: separate;
+        background: white;
+    }
+
+    .handsontable.listbox th,
+    .handsontable.listbox tr:first-child th,
+    .handsontable.listbox tr:last-child th,
+    .handsontable.listbox tr:first-child td,
+    .handsontable.listbox td {
+        border-width: 0;
+    }
+
+    .handsontable.listbox th,
+    .handsontable.listbox td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+        .handsontable.listbox td.htDimmed {
+            cursor: default;
+            color: inherit;
+            font-style: inherit;
+        }
+
+    .handsontable.listbox .wtBorder {
+        visibility: hidden;
+    }
+
+    .handsontable.listbox tr td.current,
+    .handsontable.listbox tr:hover td {
+        background: #eee;
+    }
+
+.htContextMenu {
+    display: none;
+    position: absolute;
+}
+
+    .htContextMenu table.htCore {
+        outline: 1px solid #bbb;
+    }
+
+    .htContextMenu .wtBorder {
+        visibility: hidden;
+    }
+
+    .htContextMenu table tbody tr td {
+        background: white;
+        border-width: 0;
+        padding: 4px 6px 0px 6px;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+        .htContextMenu table tbody tr td:first-child {
+            border: 0;
+        }
+
+        .htContextMenu table tbody tr td.htDimmed {
+            font-style: normal;
+            color: #323232;
+        }
+
+        .htContextMenu table tbody tr td.current {
+            background: rgb(233, 233, 233);
+        }
+
+        .htContextMenu table tbody tr td.htSeparator {
+            border-top: 1px solid #bbb;
+            height: 0;
+            padding: 0;
+        }
+
+        .htContextMenu table tbody tr td.htDisabled {
+            color: #999;
+        }
+
+            .htContextMenu table tbody tr td.htDisabled:hover {
+                background: white;
+                color: #999;
+                cursor: default;
+            }
+
+/*WalkontableDebugOverlay*/
+
+.wtDebugHidden {
+    display: none;
+}
+
+.wtDebugVisible {
+    display: block;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: wtFadeInFromNone;
+    animation-duration: 0.5s;
+    animation-name: wtFadeInFromNone;
+}
+
+@keyframes wtFadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes wtFadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

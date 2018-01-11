@@ -3,35 +3,1046 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="assets/Comments/wrikecss.css" rel="stylesheet" />
     <link href="assets/Comments/CommentsAreaCss.css" rel="stylesheet" />
+    <link href="assets/Comments/wrikemain.css" rel="stylesheet" />
+    <style>
+        ._nghost-wvb-22 {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+            ._nghost-wvb-22 .button-flex-container {
+                display: -webkit-flex;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            ._nghost-wvb-22 .button {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                box-sizing: border-box;
+                display: inline-block;
+                vertical-align: middle;
+                width: 100%;
+                height: 32px;
+                padding: 0 16px;
+                background-color: white;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 2px;
+                -webkit-font-smoothing: antialiased;
+                font: 13px "Open sans", "lucida grande", "Segoe UI", arial, verdana, tahoma, "Hiragino Kaku Gothic ProN", "Osaka", "Meiryo UI", "Yu Gothic UI", sans-serif;
+                color: #333;
+                line-height: 30px;
+                text-decoration: none;
+                text-align: center;
+                text-transform: inherit;
+                cursor: pointer;
+                outline-width: 0;
+            }
+
+                ._nghost-wvb-22 .button::-moz-focus-inner {
+                    padding: 0;
+                    border: 0;
+                }
+
+                ._nghost-wvb-22 .button:not(:disabled):hover {
+                    border-color: rgba(0, 0, 0, 0.3);
+                }
+
+                ._nghost-wvb-22 .button:not(:disabled):focus {
+                    border-color: rgba(0, 0, 0, 0.3);
+                }
+
+                ._nghost-wvb-22 .button:disabled {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: .5;
+                }
+
+            ._nghost-wvb-22 .button-icon {
+                display: -webkit-inline-flex;
+                display: inline-flex;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+
+                ._nghost-wvb-22 .button-icon svg {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+            ._nghost-wvb-22 .button-content {
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-basis: 1%;
+                -ms-flex-preferred-size: auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+            }
+
+            ._nghost-wvb-22 .button-icon + .button-content {
+                margin-left: 4px;
+            }
+
+            ._nghost-wvb-22 .button-anchor {
+                display: -webkit-inline-flex;
+                display: inline-flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                flex-shrink: 0;
+                flex-grow: 0;
+                margin-left: 4px;
+                opacity: .7;
+            }
+
+            ._nghost-wvb-22 .size-s {
+                font-size: 11px;
+                line-height: 22px;
+                height: 24px;
+            }
+
+            ._nghost-wvb-22 .size-m {
+                font-size: 13px;
+                line-height: 30px;
+                height: 32px;
+            }
+
+            ._nghost-wvb-22 .size-l {
+                font-size: 16px;
+                line-height: 38px;
+                height: 40px;
+            }
+
+            ._nghost-wvb-22 .size-xl {
+                font-size: 18px;
+                line-height: 46px;
+                height: 48px;
+            }
+
+            ._nghost-wvb-22 .skin-link {
+                border-color: transparent;
+                background-color: transparent;
+                padding: 0;
+                border-radius: 0;
+                color: #3b7ed5;
+            }
+
+                ._nghost-wvb-22 .skin-link .button-anchor {
+                    margin-right: 0;
+                }
+
+                ._nghost-wvb-22 .skin-link:not(:disabled):hover {
+                    border-color: transparent;
+                    color: #438ef0;
+                }
+
+                ._nghost-wvb-22 .skin-link:not(:disabled):focus {
+                    border-color: transparent;
+                    color: #438ef0;
+                }
+
+                ._nghost-wvb-22 .skin-link:not(:disabled):active {
+                    border-color: transparent;
+                    color: #3570bd;
+                }
+
+                ._nghost-wvb-22 .skin-link:disabled {
+                    color: rgba(0, 0, 0, 0.4);
+                    opacity: 1;
+                }
+
+            ._nghost-wvb-22 .skin-action {
+                color: white;
+                background-color: #3b7ed5;
+                border-color: transparent;
+            }
+
+                ._nghost-wvb-22 .skin-action:not(:disabled):hover {
+                    background-color: #438ef0;
+                    border-color: transparent;
+                }
+
+                ._nghost-wvb-22 .skin-action:not(:disabled):focus {
+                    background-color: #438ef0;
+                    border-color: transparent;
+                }
+
+                ._nghost-wvb-22 .skin-action:not(:disabled):active {
+                    background-color: #3570bd;
+                    border-color: transparent;
+                }
+
+            ._nghost-wvb-22 .font-size-s {
+                font-size: 11px;
+            }
+
+            ._nghost-wvb-22 .font-size-m {
+                font-size: 13px;
+            }
+
+            ._nghost-wvb-22 .font-size-l {
+                font-size: 16px;
+            }
+
+            ._nghost-wvb-22 .font-size-xl {
+                font-size: 18px;
+            }
+
+        _:-ms-fullscreen._ngcontent-wvb-22, :root {
+        }
+
+            _:-ms-fullscreen._ngcontent-wvb-22 .button._ngcontent-wvb-22 .button-content._ngcontent-wvb-22, :root .button .button-content {
+                flex-basis: auto;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .button, .ui-kit-button-v2 ._nghost-wvb-22 .button {
+            display: block;
+            background-color: transparent;
+            border-color: rgba(0, 0, 0, 0.5);
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .button:disabled, .ui-kit-button-v2 ._nghost-wvb-22 .button:disabled {
+                opacity: 1;
+                border-color: rgba(171, 171, 171, 0.5);
+                color: #ababab;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .button:not(:disabled):hover, .ui-kit-button-v2 ._nghost-wvb-22 .button:not(:disabled):hover, ._nghost-wvb-22.ui-kit-button-v2 .button:not(:disabled):focus, .ui-kit-button-v2 ._nghost-wvb-22 .button:not(:disabled):focus {
+                border-color: #48f;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .button:not(:disabled):active, .ui-kit-button-v2 ._nghost-wvb-22 .button:not(:disabled):active {
+                border-color: rgba(0, 0, 0, 0.9);
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .button-icon {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .button-icon svg, .ui-kit-button-v2 ._nghost-wvb-22 .button-icon svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .button-icon wrike-icon, .ui-kit-button-v2 ._nghost-wvb-22 .button-icon wrike-icon {
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+                ._nghost-wvb-22.ui-kit-button-v2 .button-icon wrike-icon .wrike-icon, .ui-kit-button-v2 ._nghost-wvb-22 .button-icon wrike-icon .wrike-icon {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                ._nghost-wvb-22.ui-kit-button-v2 .button-icon wrike-icon svg, .ui-kit-button-v2 ._nghost-wvb-22 .button-icon wrike-icon svg {
+                    width: 100%;
+                    height: 100%;
+                }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .button-content, .ui-kit-button-v2 ._nghost-wvb-22 .button-content {
+            display: block;
+        }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .button-anchor, .ui-kit-button-v2 ._nghost-wvb-22 .button-anchor {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .size-s, .ui-kit-button-v2 ._nghost-wvb-22 .size-s {
+            padding: 0 8px;
+            font-size: 12px;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-s .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .size-s .button-icon {
+                width: 16px;
+                height: 16px;
+                margin-left: 0px;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-s .button-anchor svg, .ui-kit-button-v2 ._nghost-wvb-22 .size-s .button-anchor svg {
+                width: 6px;
+                height: 4px;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .size-m, .ui-kit-button-v2 ._nghost-wvb-22 .size-m {
+            padding: 0 16px;
+            font-size: 14px;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-m .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .size-m .button-icon {
+                width: 16px;
+                height: 16px;
+                margin-left: -4px;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-m .button-anchor svg, .ui-kit-button-v2 ._nghost-wvb-22 .size-m .button-anchor svg {
+                width: 7px;
+                height: 5px;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .size-l, .ui-kit-button-v2 ._nghost-wvb-22 .size-l {
+            padding: 0 24px;
+            font-size: 16px;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-l .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .size-l .button-icon {
+                width: 24px;
+                height: 24px;
+                margin-left: -8px;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-l .button-anchor svg, .ui-kit-button-v2 ._nghost-wvb-22 .size-l .button-anchor svg {
+                width: 8px;
+                height: 6px;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .size-xl, .ui-kit-button-v2 ._nghost-wvb-22 .size-xl {
+            padding: 0 32px;
+            font-size: 18px;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-xl .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .size-xl .button-icon {
+                width: 24px;
+                height: 24px;
+                margin-left: -12px;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .size-xl .button-anchor svg, .ui-kit-button-v2 ._nghost-wvb-22 .size-xl .button-anchor svg {
+                width: 9px;
+                height: 7px;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .skin-default:not(:disabled):active, .ui-kit-button-v2 ._nghost-wvb-22 .skin-default:not(:disabled):active {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .skin-link, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link {
+            position: relative;
+            padding: 0;
+            border-color: transparent;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-link .button-icon, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link .button-icon {
+                margin-left: 0;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-link:not(:disabled):hover, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link:not(:disabled):hover, ._nghost-wvb-22.ui-kit-button-v2 .skin-link:not(:disabled):focus, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link:not(:disabled):focus {
+                color: #48f;
+                border-color: transparent;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-link:not(:disabled):active, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link:not(:disabled):active {
+                color: black;
+                border-color: transparent;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-link:disabled, .ui-kit-button-v2 ._nghost-wvb-22 .skin-link:disabled {
+                border-color: transparent;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .skin-action, .ui-kit-button-v2 ._nghost-wvb-22 .skin-action {
+            background-color: #48f;
+            border-color: transparent;
+            color: white;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-action:disabled, .ui-kit-button-v2 ._nghost-wvb-22 .skin-action:disabled {
+                background: white;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-action:not(:disabled):hover, .ui-kit-button-v2 ._nghost-wvb-22 .skin-action:not(:disabled):hover, ._nghost-wvb-22.ui-kit-button-v2 .skin-action:not(:disabled):focus, .ui-kit-button-v2 ._nghost-wvb-22 .skin-action:not(:disabled):focus {
+                background-color: #69a0ff;
+                border-color: transparent;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-action:not(:disabled):active, .ui-kit-button-v2 ._nghost-wvb-22 .skin-action:not(:disabled):active {
+                background-color: #3d7ae6;
+                border-color: transparent;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2 .skin-critical, .ui-kit-button-v2 ._nghost-wvb-22 .skin-critical {
+            background-color: #f15866;
+            border-color: transparent;
+            color: white;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-critical:disabled, .ui-kit-button-v2 ._nghost-wvb-22 .skin-critical:disabled {
+                background: white;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-critical:not(:disabled):hover, .ui-kit-button-v2 ._nghost-wvb-22 .skin-critical:not(:disabled):hover, ._nghost-wvb-22.ui-kit-button-v2 .skin-critical:not(:disabled):focus, .ui-kit-button-v2 ._nghost-wvb-22 .skin-critical:not(:disabled):focus {
+                background-color: #f47985;
+                border-color: transparent;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2 .skin-critical:not(:disabled):active, .ui-kit-button-v2 ._nghost-wvb-22 .skin-critical:not(:disabled):active {
+                background-color: #d94f5c;
+                border-color: transparent;
+            }
+
+        ._nghost-wvb-22.icon-only .button {
+            width: 32px;
+            padding: 0;
+        }
+
+        ._nghost-wvb-22.icon-only .size-s {
+            width: 24px;
+        }
+
+        ._nghost-wvb-22.icon-only .size-m {
+            width: 32px;
+        }
+
+        ._nghost-wvb-22.icon-only .size-l {
+            width: 40px;
+        }
+
+        ._nghost-wvb-22.icon-only .size-xl {
+            width: 48px;
+        }
+
+        ._nghost-wvb-22.ui-kit-button-v2.icon-only .button-icon {
+            margin-left: 0;
+        }
+
+        ._nghost-wvb-22.icon-only .button-content {
+            display: none;
+        }
+
+        ._nghost-wvb-22.icon-only .button-anchor {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        ._nghost-wvb-22.icon-only.ui-kit-button-v2 .button-icon, .ui-kit-button-v2 .icon-only._nghost-wvb-22 .button-icon {
+            margin-left: 0;
+        }
+
+        ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .button, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .button {
+            color: white;
+        }
+
+            ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .button:disabled, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .button:disabled {
+                color: #ababab;
+                background-color: transparent;
+            }
+
+        ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .skin-default, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .skin-default {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+            ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .skin-default:not(:disabled):hover, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .skin-default:not(:disabled):hover {
+                border-color: #69a0ff;
+            }
+
+            ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .skin-default:not(:disabled):active, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .skin-default:not(:disabled):active {
+                border-color: white;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+        ._nghost-wvb-22.theme-dark.ui-kit-button-v2 .skin-link:not(:disabled):active, .theme-dark.ui-kit-button-v2 ._nghost-wvb-22 .skin-link:not(:disabled):active {
+            color: white;
+        }
+
+        ._nghost-wvb-22.ui-kit-button-v2.button-style-highlighted .skin-link, .ui-kit-button-v2.button-style-highlighted ._nghost-wvb-22 .skin-link {
+            color: #48f;
+        }
+
+            ._nghost-wvb-22.ui-kit-button-v2.button-style-highlighted .skin-link:not(:disabled):hover, .ui-kit-button-v2.button-style-highlighted ._nghost-wvb-22 .skin-link:not(:disabled):hover, ._nghost-wvb-22.ui-kit-button-v2.button-style-highlighted .skin-link:not(:disabled):focus, .ui-kit-button-v2.button-style-highlighted ._nghost-wvb-22 .skin-link:not(:disabled):focus {
+                color: #69a0ff;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2.button-style-highlighted .skin-link:not(:disabled):active, .ui-kit-button-v2.button-style-highlighted ._nghost-wvb-22 .skin-link:not(:disabled):active {
+                color: #3d7ae6;
+            }
+
+            ._nghost-wvb-22.ui-kit-button-v2.button-style-highlighted .skin-link:disabled, .ui-kit-button-v2.button-style-highlighted ._nghost-wvb-22 .skin-link:disabled {
+                color: #ababab;
+            }
+
+        ._nghost-wvb-22.ui-kit-button-v2.button-style-uppercase .button, .ui-kit-button-v2.button-style-uppercase ._nghost-wvb-22 .button {
+            text-transform: uppercase;
+        }
+
+        ._nghost-wvb-22[disabledClick] {
+            pointer-events: none;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Begin emoji-picker Stylesheets -->
+    <link href="emoji/lib/css/emoji.css" rel="stylesheet">
+    <!-- End emoji-picker Stylesheets -->
+
 </head>
 <body>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Begin emoji-picker JavaScript -->
+    <script src="emoji/lib/js/config.js"></script>
+    <script src="emoji/lib/js/util.js"></script>
+    <script src="emoji/lib/js/jquery.emojiarea.js"></script>
+    <script src="emoji/lib/js/emoji-picker.js"></script>
+    <!-- End emoji-picker JavaScript -->
+    <script>
+        $(function () {
+            // Initializes and creates emoji set from sprite sheet
+            window.emojiPicker = new EmojiPicker({
+                emojiable_selector: '[data-emojiable=true]',
+                assetsPath: 'emoji/lib/img/',
+                popupButtonClasses: 'fa fa-smile-o'
+            });
+            // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+            // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+            // It can be called as many times as necessary; previously converted input fields will not be converted again
+            window.emojiPicker.discover();
+        });
+    </script>
+    <script>
+        // Google Analytics
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49610253-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <p class="lead emoji-picker-container">
+        <input type="email" class="form-control" placeholder="Input field" data-emojiable="true">
+    </p>
+    <br />
     <div class="stream-panel wspace-task-widgets-stream-view" id="ext-comp-1109">
-        <div class="stream-view-template-target" id="ext-gen157"><div class="stream-entry stream-task-entry stream-entry-read"><div class="stream-entry-unfollowed-message">You`ve unfollowed the task and will no longer receive update notifications</div><div class="stream-entry-comment-wrap"><div class="stream-entry-wrap"><div class="expand-ct" id="ext-gen371"><div class="expand-link-border"></div></div><div class="comments" id="ext-gen253"><div class="comment comment-hasactions  comment-firstindateperiod  comment-firstbyuser  comment-changes  comment-changes-single "><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513406694794">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reply">Reply</span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513406694794">12:14</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513406694794">12:14</span></span></div><div class="changes-multi-items"><div class="changes-item no-icon-change">changed status to <span class="highlight status-highlight" style="color:#689F38">Completed</span></div></div></div></div></div></div><div class="comment comment-hasactions  comment-firstbyuser  comment-text "><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513406705880">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reaction"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" /></svg></span><span class="action-comment-button action-comment-reply">Reply</span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513406705880">12:15</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513406705880">12:15</span></span></div><div class="changes-item"><span class="text-entry " data-entryid="144812417" data-entrytype="comment">	hello</span></div><div class="reaction-container">	<span class="reaction-container-button reactions-black-tooltip" data-reacted="false" data-code=":kissing_smiling_eyes:" data-count="1"><img class="emojione" alt=":kissing_smiling_eyes:" src="https://cdn.wrike.com/static/emoji/svg/1f619.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content">A Viniston <span class="reaction-tooltip-grey-text">reacted with :kissing_smiling_eyes:</span></span></span><span class="reaction-container-button reaction-container-button-add-reaction"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" /></svg></span></div></div></div></div></div><div class="comment comment-hasactions  comment-firstbyuser  comment-changes  comment-changes-multi "><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513407360552">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reply" id="ext-gen372">Reply</span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513407360552">12:26</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407360552">12:26</span></span></div><div class="changes-multi-items"><div class="changes-item no-icon-change">changed importance to <span class="highlight importance-High">High</span></div><div class="changes-item no-icon-change">assigned task to <a class="highlight stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a>, <a class="highlight stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></div></div></div></div></div></div><div class="comment comment-hasactions  comment-firstbyuser  comment-text " id="ext-gen391"><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513407398228">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reaction"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" /></svg></span><span class="action-comment-button action-comment-reply" id="ext-gen389">Reply</span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513407398228">12:26</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407398228">12:26</span></span></div><div class="changes-item"><span class="text-entry " id="ext-gen390" data-entryid="144812458" data-entrytype="comment">	<blockquote class="quote" contenteditable="false" unselectable="on" data-title="test" data-date="1513406684638" data-user="3MSuEWawGH1N" data-entryid="198082541" data-entrytype="task"><svg xmlns="http://www.w3.org/2000/svg" class="quotes-icon" width="16" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--stream--quote" /></svg><span class="quote-text">  Hello Man<br><br></span><span class="quote-source"> test</span></blockquote></span></div><div class="reaction-container">	<span class="reaction-container-button reactions-black-tooltip active" id="ext-gen395" data-reacted="true" data-code=":joy:" data-count="1"><img class="emojione" alt=":joy:" src="https://cdn.wrike.com/static/emoji/svg/1f602.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content" id="ext-gen394">You <span class="reaction-tooltip-grey-text">reacted with :joy:</span></span></span>	<span class="reaction-container-button reactions-black-tooltip active" data-reacted="true" data-code=":neutral_face:" data-count="1"><img class="emojione" alt=":neutral_face:" src="https://cdn.wrike.com/static/emoji/svg/1f610.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content">You <span class="reaction-tooltip-grey-text">reacted with :neutral_face:</span></span></span><span class="reaction-container-button reaction-container-button-add-reaction"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" /></svg></span></div></div></div></div></div><div class="comment comment-hasactions  comment-firstbyuser  comment-changes  comment-changes-multi "><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513407493661">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reply">Reply</span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513407493661">12:28</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407493661">12:28</span></span></div><div class="changes-multi-items"><div class="changes-item no-icon-change">scheduled task for <span class="highlight">Jan 10 – Jan 18, 2018 (7d)</span></div><div class="changes-item no-icon-change"><a class="stream-set-description highlight">updated description</a></div></div></div></div></div></div><div class="comment comment-hasactions  comment-firstbyuser  comment-text "><div class="date-container"><span class="date dateperiod-to-be-updated" value="1513408456681">Today</span><div class="date-container-border-wrap"></div><div class="date-container-text">New</div></div><div class="comment-wrap"><div class="visual"><div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img width="32" height="32" src="assets/Comments/FwfpOolxFk2M.png"></div></div><div class="details"><div class="change-wrapper"><span class="actions-markup"><div class="action-wrapper"><span class="action-comment-button action-comment-reaction"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" /></svg></span><span class="action-comment-button action-comment-edit">Edit</span><span class="action-comment-button action-comment-more js-remove"><svg xmlns="http://www.w3.org/2000/svg" class="more-icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon" /></svg></span></div></span><span class="time-ct time-ct-inline"> <span class="date" value="1513408456681">12:44</span></span><div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513408456681">12:44</span></span></div><div class="changes-item"><span class="text-entry " data-entryid="144812491" data-entrytype="comment">	<a class="stream-user-id avatar" rel="3MSuEWawGH1N">@A Viniston</a> hello</span></div></div></div></div></div></div></div></div></div></div><div class="as-loading x-hide-display" id="ext-comp-1136"><div class="w3-mask-loading"></div></div><div class=" stream-btn-load-more x-hide-display" id="ext-comp-1137">	<div class="text-wrap"><div class="title-wrap">More updates</div><span class="date-wrap">&nbsp;</span></div></div><div class="wrike-button-link auto-updates-mode-switcher" id="ext-comp-1110">
+        <div class="stream-view-template-target" id="ext-gen157">
+            <div class="stream-entry stream-task-entry stream-entry-read">
+                <div class="stream-entry-unfollowed-message">
+                    You`ve unfollowed the task and will no longer receive update notifications
+                </div>
+                <div class="stream-entry-comment-wrap">
+                    <div class="stream-entry-wrap">
+                        <div class="expand-ct" id="ext-gen247">
+                            <div class="expand-link-border"></div>
+                            <span class="expand-link">Show more updates</span>
+                        </div>
+                        <div class="comments" id="ext-gen253">
+                            <div class="comment comment-hasactions  comment-firstindateperiod  comment-firstbyuser  comment-changes  comment-changes-single ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513406694794">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/DhIInauOfxZQ.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper"><span class="action-comment-button action-comment-reply">Reply</span></div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513406694794">12:14</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513406694794">12:14</span></span></div>
+                                            <div class="changes-multi-items">
+                                                <div class="changes-item no-icon-change">changed status to <span class="highlight status-highlight" style="color:#689F38">Completed</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstbyuser  comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513406705880">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction">
+                                                                <svg id="wspace--stream--icon--add-reaction" viewBox="0 0 23 14" width="100%" height="100%">
+                                                                    <g fill-rule="evenodd">
+                                                                        <path d="M7 13A6 6 0 1 0 7 1a6 6 0 0 0 0 12zm0 1A7 7 0 1 1 7 0a7 7 0 0 1 0 14zm.005-4.32c-2.414.01-3.168-1.15-3.33-1-.137.182 1.218 2.333 3.33 2.333 2.11 0 3.468-2.15 3.33-2.333-.164-.15-.918 1.01-3.33 1zM4 6c0-.552.444-1 1-1 .552 0 1 .444 1 1 0 .552-.444 1-1 1-.552 0-1-.444-1-1zm4 0c0-.552.444-1 1-1 .552 0 1 .444 1 1 0 .552-.444 1-1 1-.552 0-1-.444-1-1zm12 0V3h-1v3h-3v1h3v3h1V7h3V6h-3z"></path>
+                                                                        <path d="M15 2h8v8h-8z" opacity=".4" fill="none"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-reply">Reply</span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513406705880">12:15</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513406705880">12:15</span></span></div>
+                                            <div class="changes-item"><span class="text-entry " data-entryid="144812417" data-entrytype="comment">	hello</span></div>
+                                            <div class="reaction-container">
+                                                <span class="reaction-container-button reactions-black-tooltip" data-reacted="false" data-code=":kissing_smiling_eyes:" data-count="1"><img class="emojione" alt=":kissing_smiling_eyes:" src="https://cdn.wrike.com/static/emoji/svg/1f619.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content">A Viniston <span class="reaction-tooltip-grey-text">reacted with :kissing_smiling_eyes:</span></span></span>
+                                                <span class="reaction-container-button reaction-container-button-add-reaction">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstbyuser  comment-changes  comment-changes-multi ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513407360552">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper"><span class="action-comment-button action-comment-reply" id="ext-gen372">Reply</span></div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513407360552">12:26</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407360552">12:26</span></span></div>
+                                            <div class="changes-multi-items">
+                                                <div class="changes-item no-icon-change">changed importance to <span class="highlight importance-High">High</span></div>
+                                                <div class="changes-item no-icon-change">assigned task to <a class="highlight stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a>, <a class="highlight stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstbyuser  comment-text " id="ext-gen391">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513407398228">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-reply" id="ext-gen389">Reply</span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513407398228">12:26</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407398228">12:26</span></span></div>
+                                            <div class="changes-item">
+                                                <span class="text-entry " id="ext-gen390" data-entryid="144812458" data-entrytype="comment">
+                                                    <blockquote class="quote" contenteditable="false" unselectable="on" data-title="test" data-date="1513406684638" data-user="3MSuEWawGH1N" data-entryid="198082541" data-entrytype="task">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="quotes-icon" width="16" height="11">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--stream--quote" />
+                                                        </svg>
+                                                        <span class="quote-text">  Hello Man<br><br></span><span class="quote-source"> test</span>
+                                                    </blockquote>
+                                                </span>
+                                            </div>
+                                            <div class="reaction-container">
+                                                <span class="reaction-container-button reactions-black-tooltip active" id="ext-gen395" data-reacted="true" data-code=":joy:" data-count="1"><img class="emojione" alt=":joy:" src="https://cdn.wrike.com/static/emoji/svg/1f602.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content" id="ext-gen394">You <span class="reaction-tooltip-grey-text">reacted with :joy:</span></span></span>	<span class="reaction-container-button reactions-black-tooltip active" data-reacted="true" data-code=":neutral_face:" data-count="1"><img class="emojione" alt=":neutral_face:" src="https://cdn.wrike.com/static/emoji/svg/1f610.svg"><span class="reaction-container-count">1</span><span class="reactions-tooltip-content">You <span class="reaction-tooltip-grey-text">reacted with :neutral_face:</span></span></span>
+                                                <span class="reaction-container-button reaction-container-button-add-reaction">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstbyuser  comment-changes  comment-changes-multi ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513407493661">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-3MSuEWawGH1N ai-645561"><img width="32" height="32" src="assets/Comments/Box_ffe0686b_65-86_v1.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper"><span class="action-comment-button action-comment-reply">Reply</span></div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513407493661">12:28</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-3MSuEWawGH1N ai-645561">A Viniston</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513407493661">12:28</span></span></div>
+                                            <div class="changes-multi-items">
+                                                <div class="changes-item no-icon-change">scheduled task for <span class="highlight">Jan 10 – Jan 18, 2018 (7d)</span></div>
+                                                <div class="changes-item no-icon-change"><a class="stream-set-description highlight">updated description</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstbyuser  comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1513408456681">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img width="32" height="32" src="assets/Comments/FwfpOolxFk2M.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 23 14" width="23" height="14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-edit">Edit</span>
+                                                    <span class="action-comment-button action-comment-more js-remove">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="more-icon" width="16" height="16">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon">
+                                                                <svg id="wspace--icon--button--more-circle-icon" fill="currentColor" viewBox="0 0 16 16" width="100%" height="100%"><g id="more_circle_icon"><path d="M2.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" id="more_circle"></path></g></svg>
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1513408456681">12:44</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1513408456681">12:44</span></span></div>
+                                            <div class="changes-item"><span class="text-entry " data-entryid="144812491" data-entrytype="comment">	<a class="stream-user-id avatar" rel="3MSuEWawGH1N">@A Viniston</a> hello</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-firstindateperiod  comment-firstbyuser  comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1514700089986">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img src="assets/Comments/FwfpOolxFk2M.png" width="32" height="32"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-edit">Edit</span>
+                                                    <span class="action-comment-button action-comment-more js-remove">
+                                                        <svg class="more-icon" width="16" height="16">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1514700089986">11:31</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1514700089986">11:31</span></span></div>
+                                            <div class="changes-item"><span class="text-entry " data-entrytype="comment" data-entryid="146082503">	welcome text message to test long description and lengthy comment. How it will looks in this comment area. Let me see that first. I need to see how this wrike will support.<br>Oh I see it is helping us nicely.</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1514700127384">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img src="assets/Comments/FwfpOolxFk2M.png" width="32" height="32"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-edit">Edit</span>
+                                                    <span class="action-comment-button action-comment-more js-remove">
+                                                        <svg class="more-icon" width="16" height="16">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1514700127384">11:32</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1514700127384">11:32</span></span></div>
+                                            <div class="changes-item"><span class="text-entry " data-entrytype="comment" data-entryid="146082510">	<a class="stream-user-id avatar" rel="3MSuEWawGH1N">@A Viniston</a></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment  comment-hasactions comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1514701629237">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img src="assets/Comments/FwfpOolxFk2M.png" width="32" height="32"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-more js-remove">
+                                                        <svg class="more-icon" width="16" height="16">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1514701629237">11:57</span></span>
+                                            <div class="stream-comment-header">
+                                                <span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">
+                                                    <span class="date date-to-be-updated" value="1514701629237">11:57</span>
+                                                </span>
+                                            </div>
+                                            <div class="changes-item">
+                                                <span class="text-entry " data-entrytype="comment" data-entryid="146082752">	Sample Photo</span>
+                                                <div class="stream-attachments-ct">
+                                                    <div class="stream-images-wrapper" style="width: 400px;height: 100px">
+                                                        <a href="assets/Comments/VinistonProfile.jpg" data-imagename="VinistonProfile.jpg" data-attachid="50895182" data-accountid="645561" data-originattachid="50895182" data-attachversion="1" id="ext-gen183" class="attachment-image" draggable="true" style="left:0px; top:0px;width:400px; height:100px;"><span class="image" style="background-image: url('assets/Comments/VinistonProfile.jpg');"></span><span class="title"><span class="title-text">VinistonProfile.jpg</span></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment comment-hasactions  comment-text ">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1514701666302">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img src="assets/Comments/FwfpOolxFk2M.png" width="32" height="32"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup">
+                                                <div class="action-wrapper">
+                                                    <span class="action-comment-button action-comment-reaction">
+                                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--stream--icon--add-reaction"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="action-comment-button action-comment-edit">Edit</span>
+                                                    <span class="action-comment-button action-comment-more js-remove">
+                                                        <svg class="more-icon" width="16" height="16">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--button--more-circle-icon"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            <span class="time-ct time-ct-inline"> <span class="date" value="1514701666302">11:57</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1514701666302">11:57</span></span></div>
+                                            <div class="changes-item">
+                                                <span class="text-entry " data-entrytype="comment" data-entryid="146082755">	sample photo</span>
+                                                <div class="stream-attachments-ct">
+                                                    <div class="stream-images-wrapper" style="width: 100px;height: 100px">
+                                                        <!--href="//storage.www.wrike.com/attachments/50895236/DhIInauOfxZQ.png?accountId=645561"-->
+                                                        <a href="assets/Comments/DhIInauOfxZQ.png" data-imagename="DhIInauOfxZQ.png" data-attachid="50895236"
+                                                           data-accountid="645561" data-originattachid="50895236" data-attachversion="1" id="ext-gen565" class="attachment-image" draggable="true"
+                                                           style="left:0px; top:0px;width:100px; height:100px;">
+                                                            <span class="image" style="background-image: url('assets/Comments/DhIInauOfxZQ.png');"></span>
+                                                            <span class="title"><span class="title-text">DhIInauOfxZQ.png</span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment  comment-text " id="ext-gen248">
+                                <div class="date-container">
+                                    <span class="date dateperiod-to-be-updated" value="1514703545642">Today</span>
+                                    <div class="date-container-border-wrap"></div>
+                                    <div class="date-container-text">New</div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <div class="visual">
+                                        <div class="x-user-avatar ua-ryVKQgWiM9pm ai-645561"><img src="assets/Comments/FwfpOolxFk2M.png" width="32" height="32"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="change-wrapper">
+                                            <span class="actions-markup"></span><span class="time-ct time-ct-inline"> <span class="date" value="1514703545642">12:29</span></span>
+                                            <div class="stream-comment-header"><span class="text-comment-author-wrap"><a class="author stream-user-id ua-ryVKQgWiM9pm ai-645561">Project Manager</a></span><span class="time-ct time-ct-block">	<span class="date date-to-be-updated" value="1514703545642">12:29</span></span></div>
+                                            <div class="changes-item">
+                                                <div class="stream-attachments-ct">
+                                                    <div class="stream-images-wrapper" style="width: undefinedpx;height: undefinedpx"></div>
+                                                    <div class="stream-images-wrapper" style="height: 180px">	<a href="//www.wrike.com/attachments/50895327/Adele%20-%20Hello" data-imagename="Adele - Hello" data-attachid="50895327" data-accountid="645561" data-originattachid="50895327" data-attachversion="1" id="ext-gen246" class="attachment-image" style="width:320px; height:180px;" data-proofing-youtube-video="true" data-proofing-youtube-permalink="https://www.youtube.com/watch?v=YQHsXMglC9A"><span class="image" style="background-image: url('https://i.ytimg.com/vi/YQHsXMglC9A/mqdefault.jpg');" id="ext-gen249"></span><span class="title"><span class="title-text">Adele - Hello</span></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="as-loading x-hide-display" id="ext-comp-1136">
+            <div class="w3-mask-loading"></div>
+        </div>
+        <div class=" stream-btn-load-more x-hide-display" id="ext-comp-1137">
+            <div class="text-wrap">
+                <div class="title-wrap">More updates</div>
+                <span class="date-wrap">&nbsp;</span>
+            </div>
+        </div>
+        <div class="wrike-button-link auto-updates-mode-switcher" id="ext-comp-1110">
             <ws-auto-updates-mode-switcher class="_nghost-onu-92">
                 <wrike-menu-button class="ui-kit-button-v2 _ngcontent-onu-92 _nghost-onu-60" hasicon="true">
                     <wrike-button class="_ngcontent-onu-60 _nghost-onu-22 icon-only theme-default" hasicon="true">
                         <button class="button _ngcontent-onu-22 skin-link size-s" type="button">
                             <span class="button-flex-container _ngcontent-onu-22">
-                                <!--template bindings={}--><span class="button-icon _ngcontent-onu-22">
+                                <!--template bindings={}-->
+                                <span class="button-icon _ngcontent-onu-22">
                                     <wrike-icon class="_ngcontent-onu-92">
                                         <span class="wrike-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="_ngcontent-onu-92" fill="currentColor" viewBox="0 0 16 16" width="16" height="16"><!--template bindings={}--><use class="_ngcontent-onu-92" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--filter-icon" /><!--template bindings={}--></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="_ngcontent-onu-92" fill="currentColor" viewBox="0 0 16 16" width="16" height="16">
+                                                <!--template bindings={}-->
+                                                <use class="_ngcontent-onu-92" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wspace--icon--filter-icon" />
+                                                <svg id="wspace--icon--stream--quote" viewBox="0 0 16 11" width="100%" height="100%">
+                                                    <path d="M6.884 2.064a7.657 7.657 0 0 0-2.07 1.206c-.636.516-1.038 1.194-1.206 2.034.936 0 1.734.222 2.394.666.66.444.99 1.17.99 2.178 0 .84-.3 1.5-.9 1.98-.6.48-1.296.72-2.088.72-1.056 0-1.83-.354-2.322-1.062C1.19 9.078.944 8.244.944 7.284c0-.864.174-1.632.522-2.304.348-.672.798-1.272 1.35-1.8s1.188-.978 1.908-1.35c.72-.372 1.44-.678 2.16-.918v1.152zm8.028 0a7.657 7.657 0 0 0-2.07 1.206c-.636.516-1.038 1.194-1.206 2.034.936 0 1.734.222 2.394.666.66.444.99 1.17.99 2.178 0 .84-.3 1.5-.9 1.98-.6.48-1.296.72-2.088.72-1.056 0-1.83-.354-2.322-1.062-.492-.708-.738-1.542-.738-2.502 0-.864.174-1.632.522-2.304.348-.672.798-1.272 1.35-1.8s1.188-.978 1.908-1.35c.72-.372 1.44-.678 2.16-.918v1.152z" fill="#AAC8E0" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <!--template bindings={}-->
+                                            </svg>
                                         </span>
                                     </wrike-icon>
-
                                 </span>
                                 <span class="button-content _ngcontent-onu-22">
-
                                 </span>
                                 <!--template bindings={}-->
                             </span>
                         </button>
                     </wrike-button>
-
-
                 </wrike-menu-button>
             </ws-auto-updates-mode-switcher>
+        </div>
+    </div>
+    <div class="wspace-task-bbar" id="ext-gen222" style="width: 950px;">
+        <div id="ext-comp-1244" class="wspace-task-widgets-comment" style="width: 950px;">
+            <div class="main-ct" id="ext-gen236">
+                <div id="ext-comp-1246" class="placeholder">Add comment</div>
+                <div id="ext-comp-1247" class="stream-comment-box stream-comment-box-hover" style="margin: 0px;">
+                    <div class="editor-outline">
+                        <div class="attach-button" id="ext-gen242"><span id="ext-comp-1249" class="editor_attach black-tooltip x-btn-noicon" tabindex="0"></span></div>
+                        <div class="editor" id="ext-gen239" style="padding-right: 88px; max-height: 658px;">
+                            <div id="ext-comp-1250" class="activity-stream-textarea-ce">
+                                <div class="CodeMirror cm-s-default CodeMirror-wrap" id="ext-gen243">
+                                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px;">
+                                        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea>
+                                    </div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 78px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1">
+                                        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; min-height: 29px; padding-right: 0px; padding-bottom: 0px;">
+                                            <div style="position: relative; top: 0px;">
+                                                <div class="CodeMirror-lines">
+                                                    <div style="position: relative; outline: none;">
+                                                        <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 21.3333px;">&nbsp;</div></div><div class="CodeMirror-code">
+                                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 29px;"></div><div class="CodeMirror-gutters" style="display: none; height: 59px;"></div>
+                                    </div>
+                                </div>
+                            </div><div class="x-field-empty-text CodeMirror-emptyText" unselectable="on" id="ext-gen244" style="visibility: hidden;"></div>
+                        </div><div class="files-wrapper" id="ext-gen240"><div id="ext-comp-1248" class=" stream-editor-attachments-ct stream-attachments-ct"><div class="stream-editor-attached-file preview-file attachment undefined" id="ext-gen448"><img class="wrike-attachment__fileicon-small wrike-attachment__fileicon-small_type_img" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><span class="file-name" title="VinistonProfile.jpg">Viniston...ile.jpg</span><a class="remove-file"><img class="remove-file-img" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a></div></div></div><div class="editor-action-panel anim-enabled sending-enabled" id="ext-gen238" style="right: 0px;">
+                            <div class="editor-action-panel-item emoji-button" id="ext-gen247">
+                                <div id="ext-comp-1251" class=" emoji-picker-button-placeholder">
+                                    <ws-emoji-picker-button class="_nghost-wvb-91">
+                                        <emoji-button class="_ngcontent-wvb-91 _nghost-wvb-92">
+                                            <wrike-button class="_ngcontent-wvb-92 _nghost-wvb-22 icon-only theme-default" hasicon="true">
+                                                <button class="button _ngcontent-wvb-22 skin-link size-s" type="button">
+                                                    <span class="button-flex-container _ngcontent-wvb-22">
+                                                        <span class="button-icon _ngcontent-wvb-22">
+                                                            <svg height="24" icon="" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="_ngcontent-wvb-92">
+                                                                <g fill="none" fill-rule="evenodd" id="Page-1" class="_ngcontent-wvb-92">
+                                                                    <g fill="currentColor" id="icons/smile_icon" class="_ngcontent-wvb-92">
+                                                                        <path d="M12.0054 2.05c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10m0 1.4c4.742 0 8.6 3.858 8.6 8.6 0 4.742-3.858 8.6-8.6 8.6-4.742 0-8.6-3.858-8.6-8.6 0-4.742 3.858-8.6 8.6-8.6zm-2.496 7.35c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25zm7.5 0c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z" id="smile" class="_ngcontent-wvb-92"></path>
+                                                                        <path class="mouth _ngcontent-wvb-92" d="M12.0082 17.45c-1.922 0-3.553-.909-4.353-2.39 0 0-.08-.138-.08-.211 0-.164.133-.297.297-.297h.629c.223 0 .425.108.572.277.692.791 1.742 1.223 2.935 1.223h.003c1.192 0 2.242-.432 2.935-1.223.147-.169.348-.277.572-.277h.629c.164 0 .297.133.297.297 0 .073-.08.211-.08.211-.8 1.481-2.431 2.39-4.353 2.39h-.003z" id="mouth_close"></path>
+                                                                        <path class="mouth _ngcontent-wvb-92" d="M12.0028 17.4c-1.922 0-3.553-.909-4.353-2.39 0 0-.08-.138-.08-.211 0-.164.133-.297.297-.297h8.275c.164 0 .297.133.297.297 0 .073-.08.211-.08.211-.8 1.481-2.431 2.39-4.353 2.39h-.003z" id="mouth_open"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+
+                                                        </span>
+                                                        <span class="button-content _ngcontent-wvb-22">
+
+                                                        </span>
+
+                                                    </span>
+                                                </button>
+                                            </wrike-button>
+                                        </emoji-button>
+                                    </ws-emoji-picker-button>
+                                </div>
+                            </div><div class="editor-action-panel-item send-button" id="ext-gen248"><span id="ext-comp-1252" class="editor_commit black-tooltip x-btn-noicon" tabindex="0">Send</span></div>
+                        </div>
+                    </div>
+                    <div class="messages" id="ext-gen249"><span class="lbl-hint" id="ext-comp-1253"></span></div><div id="ext-comp-1264" class=" stream-files-dropzone-message x-hide-display">Drop files here to attach to the comment</div>
+                </div>
+            </div><div id="ext-comp-1245" class=" new-comment-field stream-entry"><div class="ct-wrap" id="ext-gen234"></div></div>
         </div>
     </div>
 </body>

@@ -1,0 +1,447 @@
+﻿/*
+
+  GLOBAL HACKS =========
+
+  This file is imported as is in all index.less
+  Contains independent, self contained, temporary hacks
+  
+  Nothing should be based on the content of this file without a clear 
+  containment plan for the removal of the hack. Any separate block should be easily removed following the plan.
+
+  DO NOT use as a tool to add global styles, base.less is for that.
+
+ */
+/*
+  wrike-input-text styles
+  -----------------------
+  Waits for angular to fix the bug with components
+  hosted on empty elements
+
+  Consists of text_field.less and text_input.less
+  
+  The plan is to remove this as soon as the bug is fixed and the component can be moved from the directive declaration to component declaration and have its own styles.
+
+  Possible problems on removal:
+  unexpected style block ordering due to angular's wonky style generation
+  (this style sheet will be imported at the very top,
+  while the component styles can be potentially added after any overrides made)
+ */
+[wrike-text-input] {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    outline: none;
+    font-family: "Open sans", "lucida grande", "Segoe UI", arial, verdana, tahoma, "Hiragino Kaku Gothic ProN", "Osaka", "Meiryo UI", "Yu Gothic UI", sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+    -webkit-font-smoothing: antialiased;
+}
+
+    [wrike-text-input]::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.32);
+    }
+
+    [wrike-text-input]::-moz-placeholder {
+        color: rgba(0, 0, 0, 0.32);
+    }
+
+    [wrike-text-input]:-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.32);
+    }
+
+    [wrike-text-input]::-moz-placeholder {
+        opacity: 1;
+    }
+
+    [wrike-text-input]::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    [wrike-text-input].size-s {
+        font-size: 12px;
+    }
+
+[wrike-text-input] {
+    font-size: 14px;
+}
+
+    [wrike-text-input].size-l {
+        font-size: 16px;
+    }
+
+    [wrike-text-input].size-xl {
+        font-size: 18px;
+    }
+
+    [wrike-text-input].skin-default {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+        [wrike-text-input].skin-default.size-s {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        [wrike-text-input].skin-default.size-l {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        [wrike-text-input].skin-default.size-xl {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+    [wrike-text-input].skin-light {
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding-top: 1px;
+    }
+
+    [wrike-text-input].skin-invisible {
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding-top: 1px;
+        border-bottom-color: transparent;
+    }
+
+    [wrike-text-input]:hover {
+        border-color: rgba(0, 0, 0, 0.7);
+    }
+
+    [wrike-text-input]:focus {
+        border-color: #4488ff;
+        caret-color: #4488ff;
+    }
+
+    [wrike-text-input]:disabled {
+        color: #ababab;
+        border-color: rgba(171, 171, 171, 0.5);
+    }
+
+        [wrike-text-input]:disabled::-webkit-input-placeholder {
+            color: #ababab;
+        }
+
+        [wrike-text-input]:disabled::-moz-placeholder {
+            color: #ababab;
+        }
+
+        [wrike-text-input]:disabled:-ms-input-placeholder {
+            color: #ababab;
+        }
+
+    [wrike-text-input].is-invalid,
+    [wrike-text-input]:not(.pending).touched.dirty.invalid,
+    [wrike-text-input]:invalid {
+        border-color: #f15866;
+        caret-color: currentColor;
+    }
+
+    [wrike-text-input].theme-dark {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+    }
+
+        [wrike-text-input].theme-dark::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.32);
+        }
+
+        [wrike-text-input].theme-dark::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.32);
+        }
+
+        [wrike-text-input].theme-dark:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.32);
+        }
+
+        [wrike-text-input].theme-dark.skin-invisible {
+            border-bottom-color: transparent;
+        }
+
+        [wrike-text-input].theme-dark:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        [wrike-text-input].theme-dark:focus {
+            border-color: #4488ff;
+        }
+
+        [wrike-text-input].theme-dark:disabled {
+            color: #ababab;
+            border-color: rgba(171, 171, 171, 0.5);
+        }
+
+        [wrike-text-input].theme-dark.is-invalid,
+        [wrike-text-input].theme-dark:not(.pending).touched.dirty.invalid,
+        [wrike-text-input].theme-dark:invalid {
+            border-color: #f15866;
+        }
+
+    [wrike-text-input]:read-only.with-select-on-focus {
+        cursor: pointer;
+    }
+
+    [wrike-text-input].size-s {
+        height: 24px;
+    }
+
+[wrike-text-input] {
+    height: 32px;
+}
+
+    [wrike-text-input].size-l {
+        height: 40px;
+    }
+
+    [wrike-text-input].size-xl {
+        height: 48px;
+    }
+/*
+  --------------------- wrike-input-text styles
+*/
+body {
+    background: #1d364c;
+}
+
+@supports (-webkit-appearance: none) {
+    /*
+    hack for targeting webkit
+    link: http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9
+    also targets edge but ::-webkit-scrollbar doesn't apply
+  */
+    body::-webkit-scrollbar,
+    body *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    body::-webkit-scrollbar-thumb,
+    body *::-webkit-scrollbar-thumb {
+        background-color: rgba(163, 172, 182, 0.5);
+        border: 0px solid transparent;
+        border-radius: 5px;
+        min-width: 80px;
+        min-height: 80px;
+    }
+
+    body::-webkit-scrollbar-track,
+    body *::-webkit-scrollbar-track {
+        background-color: rgba(163, 172, 182, 0.2);
+        border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-corner,
+    body *::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    .kit-scrollbar-small::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    .kit-scrollbar-autohide {
+        -webkit-background-clip: text;
+        background-color: transparent;
+        border-color: transparent;
+        transition: all 0.3s ease-out;
+    }
+
+        .kit-scrollbar-autohide::-webkit-scrollbar-thumb {
+            border: 4px solid;
+            border-color: inherit;
+            background-color: transparent;
+        }
+
+        .kit-scrollbar-autohide::-webkit-scrollbar-track {
+            background-color: inherit;
+        }
+
+        .kit-scrollbar-autohide:hover {
+            background-color: rgba(163, 172, 182, 0.2);
+            border-color: rgba(163, 172, 182, 0.5);
+        }
+
+    .kit-scrollbar-small-autohide {
+        -webkit-background-clip: text;
+        background-color: transparent;
+        border-color: transparent;
+        transition: all 0.3s ease-out;
+    }
+
+        .kit-scrollbar-small-autohide::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        .kit-scrollbar-small-autohide::-webkit-scrollbar-thumb {
+            border: 4px solid;
+            border-color: inherit;
+            background-color: transparent;
+        }
+
+        .kit-scrollbar-small-autohide::-webkit-scrollbar-track {
+            background-color: inherit;
+        }
+
+        .kit-scrollbar-small-autohide:hover {
+            background-color: rgba(163, 172, 182, 0.2);
+            border-color: rgba(163, 172, 182, 0.5);
+        }
+
+        .kit-scrollbar-small-autohide::-webkit-scrollbar-thumb {
+            border: 2px solid;
+            border-color: inherit;
+        }
+}
+
+.app-loader {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+    .app-loader .loader-container svg + svg {
+        margin-left: 16px;
+    }
+
+    .app-loader .spinner {
+        -webkit-animation: app-loader-rotator 1.8s linear infinite;
+        animation: app-loader-rotator 1.8s linear infinite;
+        transform-origin: center;
+    }
+
+        .app-loader .spinner .path {
+            transform-origin: center;
+            stroke: #4488ff;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 0;
+            -webkit-animation: app-loader-dash 1.8s ease-in-out infinite;
+            animation: app-loader-dash 1.8s ease-in-out infinite;
+        }
+
+        .app-loader .spinner .path_bg {
+            stroke: rgba(0, 0, 0, 0.1);
+        }
+
+_:-ms-fullscreen,
+:root {
+    /*
+     hack for targeting ie11
+     link: http://browserhacks.com/#hack-d19e53a0fdfba5ec0f283ae86175a3af
+     the whole style block will be ignored in other browsers because of the browser specific pseudoclass
+  */
+}
+
+    _:-ms-fullscreen .app-loader .loader-icon,
+    :root .app-loader .loader-icon {
+        animation: app-loader-rotator 1.8s linear infinite;
+    }
+
+    _:-ms-fullscreen .app-loader .spinner,
+    :root .app-loader .spinner {
+        animation: none;
+    }
+
+        _:-ms-fullscreen .app-loader .spinner .path,
+        :root .app-loader .spinner .path {
+            animation: none;
+            stroke-dasharray: 60;
+            stroke-dashoffset: 20;
+        }
+
+@supports (-ms-ime-align: auto) {
+    /*
+     hack for targeting edge
+     link: https://browserstrangeness.github.io/css_hacks.html#edge
+     the whole style block will be ignored in other browsers because of the browser specific pseudoclass
+  */
+    .app-loader .loader-icon {
+        animation: app-loader-rotator 1.8s linear infinite;
+    }
+
+    .app-loader .spinner {
+        animation: none;
+    }
+
+        .app-loader .spinner .path {
+            animation: none;
+            stroke-dasharray: 60;
+            stroke-dashoffset: 20;
+        }
+}
+
+@-webkit-keyframes app-loader-rotator {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes app-loader-rotator {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@-webkit-keyframes app-loader-dash {
+    0% {
+        stroke-dashoffset: 100;
+        transform: rotate(-450deg);
+    }
+
+    50% {
+        stroke-dashoffset: 50;
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes app-loader-dash {
+    0% {
+        stroke-dashoffset: 100;
+        transform: rotate(-450deg);
+    }
+
+    50% {
+        stroke-dashoffset: 50;
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+        transform: rotate(0deg);
+    }
+}
