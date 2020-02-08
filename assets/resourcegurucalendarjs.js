@@ -33821,7 +33821,7 @@ if (!Function.prototype.bind) {
             bootstrapPromise = Q.promise(function (resolve) {
                 //return $.ajax("/schedule/bootstrap", {
                 //return $.ajax("/schedule/bootstrap", {
-                return $.ajax("http://localhost/mDXAPI/schedule/resources/bootstrap", {
+                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
                     data: data,
                     timeout: 30000,
                     success: function (data, status, xhr) {
@@ -33850,7 +33850,7 @@ if (!Function.prototype.bind) {
             });
             resourcesPromise = Q.promise(function (resolve) {
                 //return $.ajax((RG.getApiRoot()) + "/resources?detail=1&limit=0", {
-                return $.ajax("http://localhost/mDXAPI/schedule/resources/bootstrap", {
+                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
 
                     timeout: 30000,
                     success: function (data, status, xhr) {
@@ -33883,7 +33883,7 @@ if (!Function.prototype.bind) {
                 endDate.setDate(endDate.getDate() + (12 * 7));
                 endDateStr = RG.Utils.DateFormatter.getISODate(endDate);
                 //return $.ajax((RG.getApiRoot()) + "/bookings?start_date=" + startDateStr + "&end_date=" + endDateStr + "&limit=0&calendar=1", {
-                return $.ajax("http://localhost/mDXAPI/schedule/resources/bootstrap", {
+                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
                     timeout: 30000,
                     success: function (data, status, xhr) {
                         var etag;
@@ -34096,7 +34096,7 @@ if (!Function.prototype.bind) {
         },
         resourcesPoll: function (staleCheckFn) {
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/resources?detail=1&limit=0", {
-            return $.ajax("http://localhost/mDXAPI/bookings/resources?detail=1&limit=0", {
+            return $.ajax("https://localhost:44317/bookings/resources?detail=1&limit=0", {
                 headers: {
                     "If-None-Match": RG.Utils.BookingDataParser.resourcesEtag
                 },
@@ -34197,7 +34197,7 @@ if (!Function.prototype.bind) {
                 dateRange = new RG.Utils.DateRange(RG.Utils.firstVisibleDate(), RG.Utils.lastVisibleDate());
             }
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/downtimes", {
-            return $.ajax("http://localhost/mDXAPI/bookings/downtimes", {
+            return $.ajax("https://localhost:44317/bookings/downtimes", {
                 headers: {
                     'If-None-Match': RG.Utils.BookingDataParser.downtimesEtag
                 },
@@ -34222,7 +34222,7 @@ if (!Function.prototype.bind) {
             var currentPollTime;
             currentPollTime = new Date;
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/bookings", {
-            return $.ajax("http://localhost/mDXAPI/bookings/poll", {
+            return $.ajax("https://localhost:44317/bookings/poll", {
                 headers: {
                     'If-None-Match': RG.Utils.BookingDataParser.bookingsEtag
                 },
@@ -34340,7 +34340,7 @@ if (!Function.prototype.bind) {
         },
         todayPoll: function () {
             return Q.Promise(function (resolve, reject, notify) {
-                return $.ajax("http://localhost/mDXAPI/v1/today", {
+                return $.ajax("https://localhost:44317/v1/today", {
                     success: function (data, status, xhr) {
                         window.currentUserDate.set(data);
                         return resolve('Today poll data processed');
@@ -42572,7 +42572,7 @@ if (!Function.prototype.bind) {
                 return function (resolve, reject, notify) {
                     RG.Utils.BookingDataParser.expirePolls();
                     //$.ajax("/v1/" + (_this.account.getSubdomain()) + "/bookings", {
-                    $.ajax("http://localhost/mDXAPI/bookings/POST", {
+                    $.ajax("https://localhost:44317/bookings/POST", {
                         method: "POST",
                         headers: {
                             "X-CSRF-Token": RG.Utils.getCSRFToken()
@@ -43185,7 +43185,7 @@ if (!Function.prototype.bind) {
         UpdateBookingCommand.prototype.execute = function () {
             RG.Utils.BookingDataParser.expirePolls();
             //return $.ajax("/v1/" + (this.account.getSubdomain()) + "/bookings/" + this.booking.id, {
-            return $.ajax("http://localhost/mDXAPI/v1/UpdateBookings/" + this.booking.id, {
+            return $.ajax("https://localhost:44317/v1/UpdateBookings/" + this.booking.id, {
                 method: "POST",
                 data: this._getParameters(),
                 dataType: 'json',
@@ -49060,7 +49060,7 @@ if (!Function.prototype.bind) {
             }
             bookingPromise = Q.Promise(function (resolve) {
                 //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/bookings", {
-                return $.ajax("http://localhost/mDXAPI/schedule/resources/bootstrap",
+                return $.ajax("https://localhost:44317/schedule/resources/bootstrap",
                     {
                         data: data,
                         timeout: 30000,
@@ -55357,7 +55357,7 @@ if (!Function.prototype.bind) {
                 return $.ajax(RG.getApiRoot() + "/clients", {
                     method: "POST",
                     data: data,
-                    dataType: 'json',
+                     dataType: 'json',
                     headers: {
                         "X-CSRF-Token": $('meta[name="csrf-token"]').attr('content')
                     },
@@ -59650,7 +59650,7 @@ if (!Function.prototype.bind) {
             window.addEventListener('load', function listen() {
                 window.removeEventListener('load', listen);
                 $.ajax(
-                    'http://localhost/mDXAPI//product_updates/heartbeats',
+                    'https://localhost:44317/product_updates/heartbeats',
                     {
                         method: 'GET',
                         dataType: 'json'

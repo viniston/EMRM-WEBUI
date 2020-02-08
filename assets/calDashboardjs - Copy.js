@@ -33820,7 +33820,7 @@ if (!Function.prototype.bind) {
             bootData = {};
             bootstrapPromise = Q.promise(function (resolve) {
                 //return $.ajax("/schedule/bootstrap", {
-                return $.ajax("http://localhost:55959/schedule/resources/bootstrap", {
+                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
                     data: data,
                     timeout: 30000,
                     success: function (data, status, xhr) {
@@ -33860,7 +33860,7 @@ if (!Function.prototype.bind) {
             });
             resourcesPromise = Q.promise(function (resolve) {
                 //return $.ajax((RG.getApiRoot()) + "/resources?detail=1&limit=0", {
-                return $.ajax("http://localhost:55959/resources/all", {
+                return $.ajax("https://localhost:44317/resources/all", {
                     timeout: 30000,
                     success: function (data, status, xhr) {
                         var data = [{ "id": 307388, "archived": false, "bookable": true, "email": "myprivcy2015@gmail.com", "job_title": null, "notes": "", "color": null, "name": "Viniston Arockiasamy", "image": "/images/fallback/resources/person/thumb_default.png", "account": { "id": 39923, "name": "Test", "url": "https://api.resourceguruapp.com/v1/accounts/39923" }, "phone": null, "human": true, "created_at": "2017-12-04T12:02:01Z", "updated_at": "2017-12-04T16:54:34Z", "last_updated_by": null, "url": "https://api.resourceguruapp.com/v1/vini/resources/307388", "resource_type": { "id": 199579, "name": "Person", "url": "https://api.resourceguruapp.com/v1/vini/resource_types/199579" }, "timezone": { "name": "Kolkata", "offset": 330 }, "vacation_allowance": 0, "available_periods": [{ "week_day": 1, "start_time": 540, "end_time": 780, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 1, "start_time": 840, "end_time": 1080, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 2, "start_time": 540, "end_time": 780, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 2, "start_time": 840, "end_time": 1080, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 3, "start_time": 540, "end_time": 780, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 3, "start_time": 840, "end_time": 1080, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 4, "start_time": 540, "end_time": 780, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 4, "start_time": 840, "end_time": 1080, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 5, "start_time": 540, "end_time": 780, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 5, "start_time": 840, "end_time": 1080, "valid_from": "2017-12-04", "valid_until": null }, { "week_day": 1, "start_time": 540, "end_time": 780, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 1, "start_time": 840, "end_time": 1080, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 2, "start_time": 540, "end_time": 780, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 2, "start_time": 840, "end_time": 1080, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 3, "start_time": 540, "end_time": 780, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 3, "start_time": 840, "end_time": 1080, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 4, "start_time": 540, "end_time": 780, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 4, "start_time": 840, "end_time": 1080, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 5, "start_time": 540, "end_time": 780, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }, { "week_day": 5, "start_time": 840, "end_time": 1080, "valid_from": "2011-10-31", "valid_until": "2017-12-03" }], "custom_available_periods": [], "selected_custom_field_options": [], "booked_client_ids": [], "booked_project_ids": [], "overtimes": [] }]
@@ -33899,7 +33899,7 @@ if (!Function.prototype.bind) {
                 endDate.setDate(endDate.getDate() + (12 * 7));
                 endDateStr = RG.Utils.DateFormatter.getISODate(endDate);
                 //return $.ajax((RG.getApiRoot()) + "/bookings?start_date=" + startDateStr + "&end_date=" + endDateStr + "&limit=0&calendar=1", {
-                return $.ajax("http://localhost:55959/resources/all?start_date=" + startDateStr + "&end_date=" + endDateStr + "&limit=0&calendar=1", {
+                return $.ajax("https://localhost:44317/resources/all?start_date=" + startDateStr + "&end_date=" + endDateStr + "&limit=0&calendar=1", {
                     timeout: 30000,
                     success: function (data, status, xhr) {
                         var etag;
@@ -34117,6 +34117,7 @@ if (!Function.prototype.bind) {
             return results;
         },
         resourcesPoll: function (staleCheckFn) {
+            //[{"id":471579,"creator_id":237496,"archived":false,"bookable":true,"email":"vinistonresourcemanagement@gmail.com","job_title":null,"notes":"","color":null,"name":"Viniston Arockiasamy","image":"/images/fallback/resources/person/thumb_default.png","images":{"default":"/images/fallback/resources/person/thumb_default.png","tiny":"/images/fallback/resources/person/thumb_default.png","thumb":"/images/fallback/resources/person/thumb_default.png","card":"/images/fallback/resources/person/thumb_default.png","header":"/images/fallback/resources/person/thumb_default.png"},"account":{"id":57325,"name":"ViniRM","url":"https://api.resourceguruapp.com/v1/accounts/57325"},"phone":null,"human":true,"minutes_per_day":480,"created_at":"2020-02-07T14:03:45Z","updated_at":"2020-02-07T14:04:09Z","last_updated_by":null,"url":"https://api.resourceguruapp.com/v1/vinirm/resources/471579","resource_type":{"id":286589,"name":"Person","url":"https://api.resourceguruapp.com/v1/vinirm/resource_types/286589"},"timezone":{"name":"Chennai","offset":330},"vacation_allowance":0,"user_id":237496,"available_periods":[{"week_day":1,"start_time":540,"end_time":780,"valid_from":"2020-02-07","valid_until":null},{"week_day":1,"start_time":840,"end_time":1080,"valid_from":"2020-02-07","valid_until":null},{"week_day":2,"start_time":540,"end_time":780,"valid_from":"2020-02-07","valid_until":null},{"week_day":2,"start_time":840,"end_time":1080,"valid_from":"2020-02-07","valid_until":null},{"week_day":3,"start_time":540,"end_time":780,"valid_from":"2020-02-07","valid_until":null},{"week_day":3,"start_time":840,"end_time":1080,"valid_from":"2020-02-07","valid_until":null},{"week_day":4,"start_time":540,"end_time":780,"valid_from":"2020-02-07","valid_until":null},{"week_day":4,"start_time":840,"end_time":1080,"valid_from":"2020-02-07","valid_until":null},{"week_day":5,"start_time":540,"end_time":780,"valid_from":"2020-02-07","valid_until":null},{"week_day":5,"start_time":840,"end_time":1080,"valid_from":"2020-02-07","valid_until":null}],"custom_available_periods":[],"selected_custom_field_options":[],"booked_client_ids":[],"booked_project_ids":[],"overtimes":[]}]
             return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/resources?detail=1&limit=0", {
                 headers: {
                     "If-None-Match": RG.Utils.BookingDataParser.resourcesEtag
@@ -49062,7 +49063,7 @@ if (!Function.prototype.bind) {
             }
             bookingPromise = Q.Promise(function (resolve) {
                // return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/bookings", {
-                return $.ajax("http://localhost:55959/bookings/all", {
+                return $.ajax("https://localhost:44317/bookings/all", {
                     data: data,
                     timeout: 30000,
                     success: function (response, status, xhr) {
