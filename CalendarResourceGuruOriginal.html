@@ -1,412 +1,77 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="chrome62">
 <head>
     <script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "0ebaa3bbb8", "applicationID": "14693905", "transactionName": "elgLEEIOCFVQRhcAVVVSCwBRE0tQW1BdGw==", "queueTime": 0, "applicationTime": 107, "agent": "" }</script>
     <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) { function r(n) { if (!t[n]) { var o = t[n] = { exports: {} }; e[n][0].call(o.exports, function (t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports) } return t[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++)r(n[o]); return r }({ 1: [function (e, t, n) { function r() { } function o(e, t, n) { return function () { return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this } } var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], d = "api-", l = d + "ixn-"; a(p, function (e, t) { s[t] = o(d + t, !0, "api") }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, t) { var n = {}, r = this, o = "function" == typeof t; return i(l + "tracer", [f.now(), e, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try { return t.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], n), e } finally { c.emit("fn-end", [f.now()], n) } } } }; a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) { m[t] = o(l + t) }), newrelic.noticeError = function (e) { "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()]) } }, {}], 2: [function (e, t, n) { function r(e, t) { var n = [], r = "", i = 0; for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], 3: [function (e, t, n) { function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = e[t + r]; return i } t.exports = r }, {}], 4: [function (e, t, n) { t.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, t, n) { function r() { } function o(e) { function t(e) { return e && e instanceof r ? e : e ? c(e, u, i) : i() } function n(n, r, o, i) { if (!d.aborted || i) { e && e(n, r, o); for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++)u[f].apply(a, r); var p = s[y[n]]; return p && p.push([b, n, r, a]), a } } function l(e, t) { v[e] = m(e).concat(t) } function m(e) { return v[e] || [] } function w(e) { return p[e] = p[e] || o(n) } function g(e, t) { f(e, function (e, n) { t = t || "feature", y[n] = t, t in s || (s[t] = []) }) } var v = {}, y = {}, b = { on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1 }; return b } function i() { return new r } function a() { (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {}) } var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o(); d.backlog = s }, {}], gos: [function (e, t, n) { function r(e, t, n) { if (o.call(e, t)) return e[t]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return e[t] = r, r } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], handle: [function (e, t, n) { function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) } var o = e("ee").get("handle"); t.exports = r, r.ee = o }, {}], id: [function (e, t, n) { function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () { return o++ }) } var o = 1, i = "nr@id", a = e("gos"); t.exports = r }, {}], loader: [function (e, t, n) { function r() { if (!x++) { var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort(); f(y, function (t, n) { e[t] || (e[t] = n) }), c("mark", ["onload", a() + h.offset], null, "api"); var n = d.createElement("script"); n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t) } } function o() { "complete" === d.readyState && i() } function i() { c("mark", ["domContent", a() + h.offset], null, "api") } function a() { return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset } var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document, l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype; NREUM.o = { ST: setTimeout, SI: p.setImmediate, CT: clearTimeout, XHR: w, REQ: p.Request, EV: p.Event, PR: p.Promise, MO: p.MutationObserver }; var v = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1071.min.js" }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent), h = t.exports = { offset: u, now: a, origin: v, features: {}, xhrWrappable: b }; e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api"); var x = 0, E = e(4) }, {}] }, {}, ["loader"]);</script>
     <title>mDX - Effective MRM</title>
-    <noscript><meta content="0;url=https://vini.resourceguruapp.com/javascript_disabled" http-equiv="refresh" /></noscript>
+    <noscript>
+        <meta content="0;url=https://vini.resourceguruapp.com/javascript_disabled" http-equiv="refresh" />
+    </noscript>
     <script src="https://cdn.resourceguruapp.com/assets/bowser-1.6.0.min-a4b34e6ca934823f17e9dc21c0dd7e99.js"></script>
-    <script>
-        (function () {
-            const currentOrigin = location.origin.replace(/\./g, '\\.');
-
-            const urlFilters = [
-                function (url) { return !(new RegExp('^/stats/frontend-analytics').test(url)); },
-                function (url) { return !(new RegExp('^/product_updates.*').test(url)); },
-                function (url) { return new RegExp('^\/|^' + currentOrigin + '/').test(url); }
-            ];
-
-            function isUrlAllowed(url) {
-                return urlFilters.every(function (fn) {
-                    return fn(url);
-                });
-            }
-
-            var perfApiAvailable = window.performance && performance.timing && typeof performance.getEntries == 'function';
-
-            if (perfApiAvailable)
-                performance.mark('pageLoadStarted');
-
-            var API_URL_MATCHER = /^\/v(?:\d+|next)\/([^/]*)/g,
-                ID_MATCHER = /(?:\/)(\d+)(?:$|\/)/g;
-
-            function generalizeUrl(url) {
-                var a = document.createElement('a');
-                a.href = url;
-                var generalized = a.pathname;
-                if (API_URL_MATCHER.test(generalized)) {
-                    generalized = generalized.replace(API_URL_MATCHER, function (match, account) {
-                        return match.replace(account, '{account}');
-                    }).replace(ID_MATCHER, function (match, id) {
-                        return match.replace(id, '{id}');
-                    });
-                }
-                return generalized;
-            }
-
-            function _Tracker(namespace, userId, account, useConsole) {
-                this.namespace = namespace || 'general';
-                this.userId = userId || null;
-                this.account = account || null;
-                this.requests = [];
-                this.flushTimer = null;
-                this.useConsole = useConsole || false;
-
-                this.marks = [];
-                this.measures = [];
-                this.ajaxCalls = [];
-
-                this._flush = this._flush.bind(this);
-            }
-
-            _Tracker.prototype.activate = function () {
-                if (!this.flushTimer)
-                    this.flushTimer = setInterval(this._flush, 10000);
-            };
-
-            _Tracker.prototype.deactivate = function () {
-                if (this.flushTimer) {
-                    clearInterval(this.flushTimer);
-                    this.flushTimer = null;
-                }
-            };
-
-            _Tracker.prototype.getTags = function () {
-                var path = this.namespace.replace(ID_MATCHER, function (match, id) {
-                    return match.replace(id, '{id}');
-                });
-
-                var pairs = [
-                    { key: "path", value: path },
-                    { key: "browser", value: (window.bowser && bowser.name) || null },
-                    { key: "version", value: (window.bowser && (bowser.name + ' ' + bowser.version).trim()) || null }
-                ];
-
-                if (this.account)
-                    pairs.push({ key: "account", value: this.account });
-                if (this.userId)
-                    pairs.push({ key: "userId", value: this.userId.toString() });
-
-                return pairs;
-            };
-
-            _Tracker.prototype._flush = function () {
-                var log = {
-                    marks: [],
-                    measures: [],
-                    ajaxCalls: []
-                },
-                    dataToFlush = false;
-
-                if (this.marks.length > 0) {
-                    log.marks = this.marks.map(function (mark) {
-                        return {
-                            tags: this.getTags(),
-                            name: 'frontend.' + mark.name,
-                            time: mark.time
-                        };
-                    }, this);
-                    dataToFlush = true;
-                    this.marks.length = 0;
-                }
-
-                if (this.measures.length > 0) {
-                    log.measures = this.measures.map(function (measure) {
-                        return {
-                            tags: this.getTags(),
-                            name: 'frontend.' + measure.name,
-                            value: measure.value
-                        };
-                    }, this);
-                    dataToFlush = true;
-                    this.measures.length = 0;
-                }
-
-                if (this.ajaxCalls.length > 0) {
-                    log.ajaxCalls = this.ajaxCalls.map(function (ajaxCall) {
-                        return {
-                            tags: this.getTags(),
-                            path: generalizeUrl(ajaxCall.url),
-                            duration: ajaxCall.time
-                        };
-                    }, this);
-                    dataToFlush = true;
-                    this.ajaxCalls.length = 0;
-                }
-
-                if (dataToFlush) {
-                    if (this.useConsole)
-                        console.info(JSON.stringify(log, null, 2));
-                    else {
-                        var post = new XMLHttpRequest();
-                        proxiedOpen.call(post, 'POST', '/stats/frontend-analytics');
-                        post.setRequestHeader('Content-type', 'application/json');
-                        proxiedSend.call(post, JSON.stringify(log));
-                    }
-                }
-
-            };
-
-            _Tracker.prototype.mark = function (name) {
-                if (perfApiAvailable)
-                    this.marks.push({
-                        name: name,
-                        time: performance.now()
-                    });
-            };
-
-            _Tracker.prototype.measure = function (name, value) {
-                if (perfApiAvailable)
-                    this.measures.push({
-                        name: name,
-                        value: value
-                    });
-            };
-
-            _Tracker.prototype.startAJAX = function (request, url) {
-                this.requests.push({ request: request, url: url, time: performance.now() });
-            };
-
-            _Tracker.prototype.stopAJAX = function (request) {
-                var matches = this.requests.filter(function (r) { return r.request === request; });
-                var match = matches.length ? matches[0] : null;
-                this.requests = this.requests.filter(function (r) { return r !== match; });
-                // measure & track
-                if (match) {
-                    var time = performance.now() - match.time;
-                    this.ajaxCalls.push({ url: match.url, time: time });
-                }
-                // based on url, we tag & track to statsd
-            };
-
-            window.Tracker = new _Tracker(
-                window.location.pathname,
-                147899,
-                "vini",
-                false
-            );
-
-            window.Tracker.activate();
-
-            // early exit if perf API not available
-            if (!perfApiAvailable) return;
-
-            window.addEventListener('load', onLoad);
-
-            function onLoad() {
-                window.removeEventListener('load', onLoad);
-                performance.mark('pageLoadEnded');
-                performance.measure('pageLoadTime', 'pageLoadStarted', 'pageLoadEnded');
-                var downloaded = performance.getEntries({ entryType: 'resource' }).reduce(
-                    function (acc, next) {
-                        if (next.transferSize) {
-                            acc.size += next.transferSize;
-                            acc.count++;
-                        }
-                        return acc;
-                    },
-                    {
-                        size: 0,
-                        count: 0
-                    }
-                );
-
-                Tracker.measure('downloadSize', downloaded.size);
-                Tracker.measure('downloadCount', downloaded.count);
-
-                setTimeout(function () {
-                    var pageLoadTime = performance.getEntries().filter(function (e) {
-                        return e.entryType == 'navigation';
-                    });
-                    if (pageLoadTime.length) {
-                        pageLoadTime = pageLoadTime[0].duration;
-                        Tracker.measure('pageLoadTime', pageLoadTime);
-                    }
-                }, 0);
-            }
-
-            var AJAXPROTO = window.XMLHttpRequest.prototype;
-
-            var proxiedSend = AJAXPROTO.send;
-            var proxiedOpen = AJAXPROTO.open;
-
-            AJAXPROTO.open = function (method, url, async) {
-                if (isUrlAllowed(url)) {
-                    Tracker.startAJAX(this, url);
-
-                    this.addEventListener("error", function (evt) {
-                        // detect network error
-                        if (evt.target.status == 0) {
-                            if (window.RGComponents) {
-                                RGComponents.createNetworkErrorPrompt(60000);
-                            } else {
-                                Raven.captureException(new Error('RGComponents does not exist while trying to run createNetworkErrorPrompt()'));
-                            }
-                        }
-                    });
-                }
-
-                return proxiedOpen.apply(this, [].slice.apply(arguments));
-            };
-
-            AJAXPROTO.send = function () {
-                var xhr = this;
-                this.addEventListener('load', function watch(event) {
-                    Tracker.stopAJAX(xhr);
-                    xhr.removeEventListener('load', watch);
-                });
-                return proxiedSend.apply(this, [].slice.call(arguments));
-            };
-
-        })();
-    </script>
-    <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
-    <script>
-        Raven.config("https://cd50ab80fd604f03813e2b9269645287@sentry.io/174962").install();
-    </script>
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="JjKL2RiphZVYf7Yg7UfI4hsqm8D7RF+x5QVsYrsRlAZcUqpAvYjpunXHMxKWVpoXhzIJNCJjsG+nizkyDNo4uQ==" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#B1D042">
     <meta name="msapplication-TileColor" content="#00a300">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <link href="https://cdn.resourceguruapp.com/schedule/calendar-5776e81f3b.css" rel="stylesheet" />
+    <!--<link href="/assets/calendar-5776e81f3b.css" rel="stylesheet" />-->
     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Sans+Caption:400,700|Economica:400,700|PT+Sans+Caption+Bold|PT+Sans+Narrow" />
-    <script>
-        (function () {
-            window.analytics = window.analytics || [];
-
-            window.analytics.methods = ['identify', 'group', 'track',
-                'page', 'pageview', 'alias', 'ready', 'on', 'once', 'off',
-                'trackLink', 'trackForm', 'trackClick', 'trackSubmit'];
-
-            window.analytics.factory = function (method) {
-                return function () {
-                    var args = Array.prototype.slice.call(arguments);
-                    args.unshift(method);
-                    window.analytics.push(args);
-                    return window.analytics;
-                };
-            };
-
-            for (var i = 0; i < window.analytics.methods.length; i++) {
-                var key = window.analytics.methods[i];
-                window.analytics[key] = window.analytics.factory(key);
-            }
-
-            window.analytics.load = function (key) {
-                if (document.getElementById('analytics-js')) return;
-
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.id = 'analytics-js';
-                script.async = true;
-                script.src = ('https:' === document.location.protocol
-                    ? 'https://' : 'http://')
-                    + 'cdn.segment.io/analytics.js/v1/'
-                    + key + '/analytics.min.js';
-
-                var first = document.getElementsByTagName('script')[0];
-                first.parentNode.insertBefore(script, first);
-            };
-
-            // Remove any existing mixpanel cookies.
-            var cookies = document.cookie.match(new RegExp("mp_.*?_mixpanel="));
-            if (cookies != null) {
-                cookieName = cookies[0];
-                document.cookie = cookieName + ";expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=.resourceguruapp.com";
-            }
-
-            window.analytics.SNIPPET_VERSION = '2.0.9';
-
-            window.analytics.load('y5la1gbbns');
-            window.analytics.page();
-        })();</script>
-    <script>
-        (function () {
-            function getReferringDomain(referrer) {
-                split_url = referrer.split("/");
-                if (split_url.length >= 3) {
-                    return split_url[2];
-                }
-                return referrer;
-            }
-
-            function domainDirect(url) {
-                server = "resourceguruapp.com";
-                if (url.indexOf(server) > -1) {
-                    return "$direct";
-                }
-                else {
-                    return url;
-                }
-            }
-
-            var client_side_traits = {
-                "ip_address": "27.62.144.116",
-                "$initial_referrer": domainDirect("https://www.google.co.in/"),
-                "$initial_referring_domain": getReferringDomain(domainDirect("https://www.google.co.in/")),
-                "initial_landing_page": "resourceguruapp.com/login"
-            }
-
-            if (document.cookie.toLowerCase().indexOf("rscode=true") !== -1)
-                client_side_traits.referred = "true";
-
-            var merge_objects = function (defaults, options) {
-                var extended = {};
-                var prop;
-                for (prop in defaults) {
-                    if (Object.prototype.hasOwnProperty.call(defaults, prop)) {
-                        extended[prop] = defaults[prop];
-                    }
-                }
-                for (prop in options) {
-                    if (Object.prototype.hasOwnProperty.call(options, prop)) {
-                        extended[prop] = options[prop];
-                    }
-                }
-                return extended;
-            };
-
-            var traits = merge_objects({ "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "company": { "id": "39923", "name": "Test" }, "company_id": "39923", "company_name": "Test" }, client_side_traits);
-
-            var utm_hash = {};
-
-            if (Object.keys(utm_hash).length != 0) {
-                traits = merge_objects(traits, utm_hash);
-            }
-
-            analytics.identify("147899", traits, {
-                integrations: {
-                    Intercom: {
-                        user_hash: "ac208fc0a103ff02fad167ebcb243c62bd001155ac5d65859eb43737ddb32ba0"
-                    }
-                }
-            });
-        })();</script>
-    <script>
-        analytics.group("39923", {
-            "userId": "147899",
-            "groupId": "39923",
-            "accountName": "Test",
-            "plan": null
-        });</script>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-    <script src="https://cdn.resourceguruapp.com/backpack/common-bundle.c6b46765f5d29349e73a.js"></script>
-    <script src="https://cdn.resourceguruapp.com/backpack/components.07bc97fbb93aa67e5c08.js"></script>
+    <script src="/assets/webpack/common-bundle.c6b46765f5d29349e73a.js"></script>
+    <script src="/assets/webpack/components.07bc97fbb93aa67e5c08.js"></script>
+    <!--<script src="https://cdn.resourceguruapp.com/backpack/common-bundle.c6b46765f5d29349e73a.js"></script>
+       <script src="https://cdn.resourceguruapp.com/backpack/components.07bc97fbb93aa67e5c08.js"></script>-->
 </head>
 <body>
-    <div class="prefetch" style="position:fixed; left: -9999px; opacity: 0"><i class="rg-ion-ios-trash"></i><i class="rg-ion-edit"></i><i class="rg-ion-scissors"></i><i class="rg-ion-android-time"></i><i class="rg-ion-chevron-down"></i><i class="rg-ion-gear-a"></i><i class="rg-icon--sick"></i><i class="rg-icon--maternity"></i><i class="rg-icon--training"></i><i class="rg-icon--compassionate"></i><i class="rg-icon--vacation"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar"></i><i class="rg-icon--happy"></i><i class="rg-icon--contacts"></i><div class="is-icon-link"><i class="rg-icon--calendar"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar is-hovered"></i></div><span class="rg-btn--availability-down"></span><span class="rg-btn--availability-up"></span><span class="rg-btn--availability-hover"></span><div class="icon__chevron-left"></div><div class="icon__chevron-left-active"></div><div class="icon__chevron-left-link"></div><div class="icon__chevron-left-link-active"></div><div class="icon__chevron-right"></div><div class="icon__chevron-right-active"></div><div class="icon__chevron-down"></div><div class="icon__chevron-down-active"></div><div class="icon__chevron-down-red"></div><div class="icon__calendar"></div><div class="icon__calendar-active"></div><div class="icon__availability"></div><div class="icon__availability-active"></div><div class="icon__zoom-plus"></div><div class="icon__zoom-minus"></div><div class="icon__zoom-bg"></div><div class="icon__zoom-toggle"></div><div class="icon_settings"></div><div class="icon_billing"></div><div class="icon_help"></div><div class="icon_logout"></div><div class="icon_kebab"></div><div class="icon_kebab-active"></div></div><div id="root">
+    <div class="prefetch" style="position:fixed; left: -9999px; opacity: 0">
+        <i class="rg-ion-ios-trash"></i><i class="rg-ion-edit"></i><i class="rg-ion-scissors"></i><i class="rg-ion-android-time"></i><i class="rg-ion-chevron-down"></i><i class="rg-ion-gear-a"></i><i class="rg-icon--sick"></i><i class="rg-icon--maternity"></i><i class="rg-icon--training"></i><i class="rg-icon--compassionate"></i><i class="rg-icon--vacation"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar"></i><i class="rg-icon--happy"></i><i class="rg-icon--contacts"></i>
+        <div class="is-icon-link"><i class="rg-icon--calendar"></i><i class="rg-icon--vacation is-hovered"></i><i class="rg-icon--calendar is-hovered"></i></div>
+        <span class="rg-btn--availability-down"></span><span class="rg-btn--availability-up"></span><span class="rg-btn--availability-hover"></span>
+        <div class="icon__chevron-left"></div>
+        <div class="icon__chevron-left-active"></div>
+        <div class="icon__chevron-left-link"></div>
+        <div class="icon__chevron-left-link-active"></div>
+        <div class="icon__chevron-right"></div>
+        <div class="icon__chevron-right-active"></div>
+        <div class="icon__chevron-down"></div>
+        <div class="icon__chevron-down-active"></div>
+        <div class="icon__chevron-down-red"></div>
+        <div class="icon__calendar"></div>
+        <div class="icon__calendar-active"></div>
+        <div class="icon__availability"></div>
+        <div class="icon__availability-active"></div>
+        <div class="icon__zoom-plus"></div>
+        <div class="icon__zoom-minus"></div>
+        <div class="icon__zoom-bg"></div>
+        <div class="icon__zoom-toggle"></div>
+        <div class="icon_settings"></div>
+        <div class="icon_billing"></div>
+        <div class="icon_help"></div>
+        <div class="icon_logout"></div>
+        <div class="icon_kebab"></div>
+        <div class="icon_kebab-active"></div>
+    </div>
+    <div id="root">
         <div class="is-fixed" id="header">
             <nav class="main">
-                <ul class="left-menu"><li class=""><a href="https://vini.resourceguruapp.com/">Dashboard</a></li><li class="active"><a href="https://vini.resourceguruapp.com/schedule">Schedule</a></li><li class=""><a href="https://vini.resourceguruapp.com/resources">Resources</a></li><li class=""><a href="https://vini.resourceguruapp.com/projects">Projects</a></li><li class=""><a href="https://vini.resourceguruapp.com/clients">Clients</a></li><li class=""><a href="https://vini.resourceguruapp.com/reports">Reports</a></li></ul><ul class="right-menu">
-                    <li class="dropdown is-header-dropdown has-chevron account_dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="current_account_name" title="Test">Test</span></a><ul class="dropdown-menu"><li title="Test"><a href="https://vini.resourceguruapp.com/">Test</a></li></ul></li>
+                <ul class="left-menu">
+                    <li class=""><a href="https://vini.resourceguruapp.com/">Dashboard</a></li>
+                    <li class="active"><a href="https://vini.resourceguruapp.com/schedule">Schedule</a></li>
+                    <li class=""><a href="https://vini.resourceguruapp.com/resources">Resources</a></li>
+                    <li class=""><a href="https://vini.resourceguruapp.com/projects">Projects</a></li>
+                    <li class=""><a href="https://vini.resourceguruapp.com/clients">Clients</a></li>
+                    <li class=""><a href="https://vini.resourceguruapp.com/reports">Reports</a></li>
+                </ul>
+                <ul class="right-menu">
+                    <li class="dropdown is-header-dropdown has-chevron account_dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="current_account_name" title="Test">Test</span></a>
+                        <ul class="dropdown-menu">
+                            <li title="Test"><a href="https://vini.resourceguruapp.com/">Test</a></li>
+                        </ul>
+                    </li>
                     <li class="referral-dropdown dropdown is-header-dropdown has-chevron"><a class="squatchpop icon__heart referral_link js-referral_link" data-toggle="dropdown" href="#"></a></li>
                     <li class="dropdown is-header-dropdown user_dropdown"></li>
                     <script>
@@ -419,14 +84,7 @@
                                 }
                             }
                             ready(function () {
-                                var referrals_lastOpenedDate = null;
-                                referrals_lastOpenedDate = window.rgStorage.get('referrals_lastOpenedDate');
-
-                                if (referrals_lastOpenedDate === null || new Date(parseInt(referrals_lastOpenedDate)).getDay() !== new Date().getDay()) {
-                                    window.rgStorage.set('referrals_lastOpenedDate', new Date().valueOf());
-                                    var referralLink = document.querySelector(".referral_link");
-                                    referralLink && referralLink.classList.add("pulsing");
-                                }
+                               
                             });
 
                             var CSRFToken = null;
@@ -523,7 +181,8 @@
                                     trackOpen: trackHeartbeatsOpen,
                                     trackClose: trackHeartbeatsClose
                                 });
-                        })();</script>
+                        })();
+                    </script>
                 </ul>
             </nav>
         </div>
@@ -547,85 +206,30 @@
                 };
 
                 RGComponents.createRefreshPrompt(options);
-            })();</script>
+            })();
+        </script>
     </div>
-    <script charset="utf-8" type="text/javascript">window.currentUserId = 147899; window.currentResourceInstanceId = 307388; window.userPermissions = { resourceRights: "manage_all", downtimeRights: "manage_all", bookingRights: "manage_all", projectRights: "manage_all", clientRights: "manage_all" }; window.currentUserTimeZone = "Kolkata"; window.validationData = { MaximumDowntimeLength: "365", MaximumCustomAvailabilityLength: "365" };</script><div id="calendar" style="display: none;"></div><div class="modal hide fade" id="calendar-modal-form" role="dialog"></div><div class="modal hide fade" id="calendar-modal-booking" role="dialog"></div><div class="modal hide fade" id="calendar-modal-split" role="dialog"></div><div class="modal hide fade" id="calendar-modal-waiting-list" role="dialog"></div><div class="modal hide fade" id="calendar-modal-new-client" role="dialog"></div><div class="modal hide fade" id="calendar-modal-new-project" role="dialog"></div><div id="loader">&nbsp;</div>
+    <script charset="utf-8" type="text/javascript">window.currentUserId = 147899; window.currentResourceInstanceId = 307388; window.userPermissions = { resourceRights: "manage_all", downtimeRights: "manage_all", bookingRights: "manage_all", projectRights: "manage_all", clientRights: "manage_all" }; window.currentUserTimeZone = "Kolkata"; window.validationData = { MaximumDowntimeLength: "365", MaximumCustomAvailabilityLength: "365" };</script>
+    <div id="calendar" style="display: none;"></div>
+    <div class="modal hide fade" id="calendar-modal-form" role="dialog"></div>
+    <div class="modal hide fade" id="calendar-modal-booking" role="dialog"></div>
+    <div class="modal hide fade" id="calendar-modal-split" role="dialog"></div>
+    <div class="modal hide fade" id="calendar-modal-waiting-list" role="dialog"></div>
+    <div class="modal hide fade" id="calendar-modal-new-client" role="dialog"></div>
+    <div class="modal hide fade" id="calendar-modal-new-project" role="dialog"></div>
+    <div id="loader">&nbsp;</div>
     <script>
         if (!window.RGComponents) window.RGComponents = {};
         window.RGComponents.productUpdates = {
             giftMessage: "New toys!",
             lastReadAt: new Date("2017-12-04T17:32:01.000+05:30"),
             blogLink: "https://blog.resourceguruapp.com/category/heartbeats/"
-        };</script>
+        };
+    </script>
     <script src="assets/local-storage.js"></script>
     <script src="assets/resourcegurucalendarjs.js"></script>
     <!--<script src="https://cdn.resourceguruapp.com/schedule/calendar-a4bfbd0286.js"></script>-->
     <script type="text/javascript">window.squatchUser = { tenant_alias: "apg6uc0kvdsyh", account_id: "account_147899", payment_provider_id: null, user_id: "user_147899", email: "myprivcy2015@gmail.com", first_name: "Viniston", last_name: "Arockiasamy", checksum: "ADTb+n1j24G8PP6nbFsBQz6UJ6BR9XLJgn88g6frNu0=" }</script>
-    <script>
-        var _sqh = _sqh || [];
-
-        // Push user details for a user who is logged in to your system
-        _sqh.push(['init', squatchUser]);
-
-        // Include squatch.js
-        (function () { function l() { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = location.protocol + "//d2rcp9ak152ke1.cloudfront.net/assets/javascripts/squatch.min.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t) } if (window.attachEvent) { window.attachEvent("onload", l) } else { window.addEventListener("load", l, false) } })();
-
-        var getSquatchWidgetURL = function (mode) {
-            var params = {
-                systemId: window.squatchUser.account_id,
-                userId: window.squatchUser.user_id,
-                firstName: window.squatchUser.first_name,
-                lastName: window.squatchUser.last_name,
-                email: window.squatchUser.email,
-                locale: "en_GB",
-                mode: mode,
-                paramChecksum: window.squatchUser.checksum,
-            };
-
-            var queryParts = [];
-            Object.keys(params).forEach(function (key) {
-                queryParts.push(key + "=" + params[key]);
-            });
-
-            var queryString = queryParts.join("&");
-
-            return "/referrals_embed?" + queryString;
-        };
-
-        var resizePopup = function () {
-            if (!this.style.height || parseInt(this.style.height) <= 420) {
-                this.style.height = (this.contentDocument.body.scrollHeight + 30) + 'px';
-            }
-
-            return this.style.height && parseInt(this.style.height) >= 420;
-        };
-
-        var buildReferral = function (mode, selector) {
-            var target = document.querySelector(selector);
-            if (!target) {
-                return;
-            }
-
-            var iframe = document.createElement("iframe");
-            iframe.setAttribute("frameBorder", "0");
-            iframe.onload = resizePopup;
-            iframe.setAttribute("src", getSquatchWidgetURL(mode));
-            target.appendChild(iframe);
-            if (mode == "EMBED") {
-                window.bindCloseDropDowns(iframe);
-            }
-        }
-
-        window.bindCloseDropDowns = function (iframe) {
-            var e = $(iframe).contents().find(".squatch-container-embed");
-            if (e.length) {
-                e.on("click", function () {
-                    $('body').click()
-                });
-            } else {
-                setTimeout(function () { window.bindCloseDropDowns(iframe) }, 1000);
-            };
-        }</script>
     <style type="text/css">
         nav.main > ul > li > a {
             color: #A9D43E !important;
@@ -633,6 +237,20 @@
 
         #header {
             background-color: black;
+        }
+
+        .resources--cal-unit, .resource, .resource-line {
+            height: 40px !important;
+            padding-bottom: 0px !important;
+        }
+
+            .resource img {
+                height: 24px !important;
+                width: 24px !important;
+            }
+
+        .time-available {
+            height: 0px !important;
         }
     </style>
 </body>

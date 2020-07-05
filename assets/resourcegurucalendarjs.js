@@ -33821,7 +33821,7 @@ if (!Function.prototype.bind) {
             bootstrapPromise = Q.promise(function (resolve) {
                 //return $.ajax("/schedule/bootstrap", {
                 //return $.ajax("/schedule/bootstrap", {
-                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
+                return $.ajax("http://localhost/EMRMAPI/schedule/resources/bootstrap", {
                     data: data,
                     timeout: 30000,
                     success: function (data, status, xhr) {
@@ -33850,7 +33850,7 @@ if (!Function.prototype.bind) {
             });
             resourcesPromise = Q.promise(function (resolve) {
                 //return $.ajax((RG.getApiRoot()) + "/resources?detail=1&limit=0", {
-                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
+                return $.ajax("http://localhost/EMRMAPI/schedule/resources/bootstrap", {
 
                     timeout: 30000,
                     success: function (data, status, xhr) {
@@ -33883,7 +33883,7 @@ if (!Function.prototype.bind) {
                 endDate.setDate(endDate.getDate() + (12 * 7));
                 endDateStr = RG.Utils.DateFormatter.getISODate(endDate);
                 //return $.ajax((RG.getApiRoot()) + "/bookings?start_date=" + startDateStr + "&end_date=" + endDateStr + "&limit=0&calendar=1", {
-                return $.ajax("https://localhost:44317/schedule/resources/bootstrap", {
+                return $.ajax("http://localhost/EMRMAPI/schedule/resources/bootstrap", {
                     timeout: 30000,
                     success: function (data, status, xhr) {
                         var etag;
@@ -34096,7 +34096,7 @@ if (!Function.prototype.bind) {
         },
         resourcesPoll: function (staleCheckFn) {
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/resources?detail=1&limit=0", {
-            return $.ajax("https://localhost:44317/bookings/resources?detail=1&limit=0", {
+            return $.ajax("http://localhost/EMRMAPI/bookings/resources?detail=1&limit=0", {
                 headers: {
                     "If-None-Match": RG.Utils.BookingDataParser.resourcesEtag
                 },
@@ -34197,7 +34197,7 @@ if (!Function.prototype.bind) {
                 dateRange = new RG.Utils.DateRange(RG.Utils.firstVisibleDate(), RG.Utils.lastVisibleDate());
             }
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/downtimes", {
-            return $.ajax("https://localhost:44317/bookings/downtimes", {
+            return $.ajax("http://localhost/EMRMAPI/bookings/downtimes", {
                 headers: {
                     'If-None-Match': RG.Utils.BookingDataParser.downtimesEtag
                 },
@@ -34222,7 +34222,7 @@ if (!Function.prototype.bind) {
             var currentPollTime;
             currentPollTime = new Date;
             //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/bookings", {
-            return $.ajax("https://localhost:44317/bookings/poll", {
+            return $.ajax("http://localhost/EMRMAPI/bookings/poll", {
                 headers: {
                     'If-None-Match': RG.Utils.BookingDataParser.bookingsEtag
                 },
@@ -34340,7 +34340,7 @@ if (!Function.prototype.bind) {
         },
         todayPoll: function () {
             return Q.Promise(function (resolve, reject, notify) {
-                return $.ajax("https://localhost:44317/v1/today", {
+                return $.ajax("http://localhost/EMRMAPI/v1/today", {
                     success: function (data, status, xhr) {
                         window.currentUserDate.set(data);
                         return resolve('Today poll data processed');
@@ -42572,7 +42572,7 @@ if (!Function.prototype.bind) {
                 return function (resolve, reject, notify) {
                     RG.Utils.BookingDataParser.expirePolls();
                     //$.ajax("/v1/" + (_this.account.getSubdomain()) + "/bookings", {
-                    $.ajax("https://localhost:44317/bookings/POST", {
+                    $.ajax("http://localhost/EMRMAPI/bookings/POST", {
                         method: "POST",
                         headers: {
                             "X-CSRF-Token": RG.Utils.getCSRFToken()
@@ -42587,6 +42587,7 @@ if (!Function.prototype.bind) {
                                     { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }],
                                 "removed_availability_dates": []
                             }
+
                             var action;
                             RG.Popovers.done();
                             action = function () {
@@ -43185,7 +43186,7 @@ if (!Function.prototype.bind) {
         UpdateBookingCommand.prototype.execute = function () {
             RG.Utils.BookingDataParser.expirePolls();
             //return $.ajax("/v1/" + (this.account.getSubdomain()) + "/bookings/" + this.booking.id, {
-            return $.ajax("https://localhost:44317/v1/UpdateBookings/" + this.booking.id, {
+            return $.ajax("http://localhost/EMRMAPI/v1/UpdateBookings/" + this.booking.id, {
                 method: "POST",
                 data: this._getParameters(),
                 dataType: 'json',
@@ -45662,7 +45663,7 @@ if (!Function.prototype.bind) {
                         if (typeof newrelic !== "undefined" && newrelic !== null) {
                             newrelic.finished();
                         }
-                        Tracker.mark('ready');
+                        // Tracker.mark('ready');
                         return window.requestAnimationFrame(function () {
                             $("html, body").animate({
                                 scrollLeft: element.first().offset().left - offsetLeft
@@ -47939,12 +47940,12 @@ if (!Function.prototype.bind) {
             if (this._isDateRangeValid(dateRange) && this._isResourceAvailable(dateRange)) {
                 error = false;
             } else {
-                error = true;
+                error = false;
                 errors = [];
                 if (!this._isDateRangeValid(dateRange)) {
                     errors.push("Please select a start and end date.");
                 } else if (!this._isResourceAvailable(dateRange)) {
-                    errors.push("Sorry, you can't start or end a booking on a non-working day. Please change your dates.");
+                    // errors.push("Sorry, you can't start or end a booking on a non-working day. Please change your dates.");
                 }
                 this._setErrorText(errors.join("<br>"));
             }
@@ -49060,7 +49061,7 @@ if (!Function.prototype.bind) {
             }
             bookingPromise = Q.Promise(function (resolve) {
                 //return $.ajax("/v1/" + RG.Utils.BookingDataParser.host + "/bookings", {
-                return $.ajax("https://localhost:44317/schedule/resources/bootstrap",
+                return $.ajax("http://localhost/EMRMAPI/schedule/resources/bootstrap",
                     {
                         data: data,
                         timeout: 30000,
@@ -57226,7 +57227,7 @@ if (!Function.prototype.bind) {
             return AvailableMinutes.__super__.constructor.apply(this, arguments);
         }
 
-        AvailableMinutes.prototype.className = 'time-available';
+        // AvailableMinutes.prototype.className = 'time-available';
 
         AvailableMinutes.prototype.initialize = function (options) {
             return this.availableMinutes = options.availableMinutes;
@@ -57235,7 +57236,7 @@ if (!Function.prototype.bind) {
         AvailableMinutes.prototype.render = function () {
             var availableFormatted;
             availableFormatted = RG.Utils.TimeFormatter.formatMinutes(this.availableMinutes);
-            this.el.innerHTML = availableFormatted + "<div class=\"time-available-linebreak\"></div>free";
+            //this.el.innerHTML = availableFormatted + "<div class=\"time-available-linebreak\"></div>free";
             return this;
         };
 
@@ -59024,7 +59025,7 @@ if (!Function.prototype.bind) {
         UtilisationBlock.prototype.render = function () {
             var availableFormatted, availableMinutes, lineAvailable, lines, overtimeMinutes, ratio, ref, remainingMinutesInLine, renderableNormalMinutes, renderableUnusedNormalMinutes, renderableUnusedOvertimeMinutes, renderableUsedOvertimeMinutes, unit, unusedNormalMinutes, unusedOvertimeMinutes, usedMinutes, usedNormalMinutes, usedOvertimeMinutes, width;
             availableFormatted = RG.Utils.TimeFormatter.formatMinutes(this.availableMinutes - this.usedMinutes);
-            this.el.innerHTML = "<div class=\"time-available\">" + availableFormatted + "<div class=\"time-available-linebreak\"></div>free</div>";
+            // this.el.innerHTML = "<div class=\"time-available\">" + availableFormatted + "<div class=\"time-available-linebreak\"></div>free</div>";
             availableMinutes = this.availableMinutes;
             usedMinutes = this.usedMinutes;
             overtimeMinutes = this.overtimeMinutes > this.availableMinutes ? this.availableMinutes : this.overtimeMinutes;
@@ -59650,7 +59651,7 @@ if (!Function.prototype.bind) {
             window.addEventListener('load', function listen() {
                 window.removeEventListener('load', listen);
                 $.ajax(
-                    'https://localhost:44317/product_updates/heartbeats',
+                    'http://localhost/EMRMAPI/product_updates/heartbeats',
                     {
                         method: 'GET',
                         dataType: 'json'
