@@ -33891,7 +33891,358 @@ if (!Function.prototype.bind) {
                         //var data = [{ "id": 10311631, "client_id": null, "project_id": 666793, "resource_id": 308774, "notes": "Welcome Message", "details": "Welcome Message", "start_date": "2017-12-11", "end_date": "2017-12-12", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:13:21Z", "updated_at": "2017-12-11T08:20:31Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-11", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311785, "client_id": null, "project_id": 666794, "resource_id": 308779, "notes": "Welcome TRack message", "details": "Welcome TRack message", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:55:29Z", "updated_at": "2017-12-11T08:21:10Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311639, "client_id": null, "project_id": 666788, "resource_id": 308777, "notes": "Welcome Message 1", "details": "Welcome Message 1", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:14:25Z", "updated_at": "2017-12-11T08:17:18Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10312988, "client_id": null, "project_id": null, "resource_id": 307388, "notes": "", "details": "", "start_date": "2017-12-18", "end_date": "2017-12-18", "billable": false, "refreshable": false, "created_at": "2017-12-11T08:10:48Z", "updated_at": "2017-12-11T08:10:48Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-18", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10312138, "client_id": 242096, "project_id": 666789, "resource_id": 308778, "notes": "", "details": "", "start_date": "2017-12-18", "end_date": "2017-12-21", "billable": true, "refreshable": false, "created_at": "2017-12-11T06:59:29Z", "updated_at": "2017-12-11T08:18:49Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-18", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-19", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-20", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-21", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10308908, "client_id": null, "project_id": 666791, "resource_id": 308774, "notes": "", "details": "", "start_date": "2017-12-20", "end_date": "2017-12-28", "billable": true, "refreshable": false, "created_at": "2017-12-09T11:37:30Z", "updated_at": "2017-12-11T08:19:54Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-20", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-21", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-22", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-25", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-26", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10312425, "client_id": null, "project_id": 666795, "resource_id": 308780, "notes": "", "details": "", "start_date": "2017-12-27", "end_date": "2018-01-02", "billable": true, "refreshable": false, "created_at": "2017-12-11T07:28:47Z", "updated_at": "2017-12-11T08:21:58Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-01", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-02", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }]
                         //var data = [{ "id": 10308908, "client_id": null, "project_id": null, "resource_id": 308773, "notes": "", "details": "", "start_date": "2017-12-21", "end_date": "2017-12-29", "billable": false, "refreshable": false, "created_at": "2017-12-09T11:37:30Z", "updated_at": "2017-12-09T11:37:38Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": null }, "durations": [{ "date": "2017-12-21", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-22", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-25", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-26", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }]
                         //etag = xhr.getResponseHeader("CustomETag");
-                        var data = [{ "id": 10311631, "client_id": null, "project_id": 666793, "resource_id": 308774, "notes": "Welcome Message", "details": "Welcome Message", "start_date": "2017-12-11", "end_date": "2017-12-12", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:13:21Z", "updated_at": "2017-12-11T08:20:31Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-11", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311785, "client_id": null, "project_id": 666794, "resource_id": 308779, "notes": "Welcome TRack message", "details": "Welcome TRack message", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:55:29Z", "updated_at": "2017-12-11T08:21:10Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311639, "client_id": null, "project_id": 666788, "resource_id": 308777, "notes": "Welcome Message 1", "details": "Welcome Message 1", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:14:25Z", "updated_at": "2017-12-11T08:17:18Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10308908, "client_id": null, "project_id": 666791, "resource_id": 308774, "notes": "", "details": "", "start_date": "2017-12-20", "end_date": "2017-12-29", "billable": true, "refreshable": false, "created_at": "2017-12-09T11:37:30Z", "updated_at": "2017-12-12T06:01:11Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-20", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-21", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-22", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-25", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-26", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10312425, "client_id": null, "project_id": 666795, "resource_id": 308780, "notes": "", "details": "", "start_date": "2017-12-27", "end_date": "2018-01-02", "billable": true, "refreshable": false, "created_at": "2017-12-11T07:28:47Z", "updated_at": "2017-12-11T08:21:58Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-01", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-02", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10398794, "client_id": null, "project_id": 666791, "resource_id": 308774, "notes": "Test task for test name length and need to see how its looks. This is test plan", "details": "Test task for test name length and need to see how its looks. This is test plan", "start_date": "2018-01-01", "end_date": "2018-01-05", "billable": true, "refreshable": false, "created_at": "2017-12-19T13:43:22Z", "updated_at": "2017-12-19T13:48:19Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2018-01-01", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-02", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-03", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-04", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-05", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }]
+                        //var data = [{ "id": 10311631, "client_id": null, "project_id": 666793, "resource_id": 308774, "notes": "Welcome Message", "details": "Welcome Message", "start_date": "2017-12-11", "end_date": "2017-12-12", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:13:21Z", "updated_at": "2017-12-11T08:20:31Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-11", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311785, "client_id": null, "project_id": 666794, "resource_id": 308779, "notes": "Welcome TRack message", "details": "Welcome TRack message", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:55:29Z", "updated_at": "2017-12-11T08:21:10Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10311639, "client_id": null, "project_id": 666788, "resource_id": 308777, "notes": "Welcome Message 1", "details": "Welcome Message 1", "start_date": "2017-12-12", "end_date": "2017-12-15", "billable": true, "refreshable": false, "created_at": "2017-12-11T05:14:25Z", "updated_at": "2017-12-11T08:17:18Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-12", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-13", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-14", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-15", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10308908, "client_id": null, "project_id": 666791, "resource_id": 308774, "notes": "", "details": "", "start_date": "2017-12-20", "end_date": "2017-12-29", "billable": true, "refreshable": false, "created_at": "2017-12-09T11:37:30Z", "updated_at": "2017-12-12T06:01:11Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-20", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-21", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-22", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-25", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-26", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10312425, "client_id": null, "project_id": 666795, "resource_id": 308780, "notes": "", "details": "", "start_date": "2017-12-27", "end_date": "2018-01-02", "billable": true, "refreshable": false, "created_at": "2017-12-11T07:28:47Z", "updated_at": "2017-12-11T08:21:58Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2017-12-27", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-28", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2017-12-29", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-01", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-02", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }, { "id": 10398794, "client_id": null, "project_id": 666791, "resource_id": 308774, "notes": "Test task for test name length and need to see how its looks. This is test plan", "details": "Test task for test name length and need to see how its looks. This is test plan", "start_date": "2018-01-01", "end_date": "2018-01-05", "billable": true, "refreshable": false, "created_at": "2017-12-19T13:43:22Z", "updated_at": "2017-12-19T13:48:19Z", "last_updated_by": 147899, "booker": { "id": 147899, "name": "Viniston Arockiasamy", "email": "myprivcy2015@gmail.com", "color": "#ffb400" }, "durations": [{ "date": "2018-01-01", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-02", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-03", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-04", "duration": 480, "start_time": null, "end_time": null, "waiting": false }, { "date": "2018-01-05", "duration": 480, "start_time": null, "end_time": null, "waiting": false }] }]
+                        var data = [
+                            {
+                                "id": 10311631,
+                                "client_id": null,
+                                "project_id": 666793,
+                                "resource_id": 308774,
+                                "notes": "Welcome Message",
+                                "details": "Welcome Message",
+                                "start_date": "2017-12-11",
+                                "end_date": "2017-12-12",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-11T05:13:21Z",
+                                "updated_at": "2017-12-11T08:20:31Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2017-12-11",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-12",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 10311785,
+                                "client_id": null,
+                                "project_id": 666794,
+                                "resource_id": 308779,
+                                "notes": "Welcome TRack message",
+                                "details": "Welcome TRack message",
+                                "start_date": "2017-12-12",
+                                "end_date": "2017-12-15",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-11T05:55:29Z",
+                                "updated_at": "2017-12-11T08:21:10Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2017-12-12",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-13",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-14",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-15",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 10311639,
+                                "client_id": null,
+                                "project_id": 666788,
+                                "resource_id": 308777,
+                                "notes": "Welcome Message 1",
+                                "details": "Welcome Message 1",
+                                "start_date": "2017-12-12",
+                                "end_date": "2017-12-15",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-11T05:14:25Z",
+                                "updated_at": "2017-12-11T08:17:18Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2017-12-12",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-13",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-14",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-15",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 10308908,
+                                "client_id": null,
+                                "project_id": 666791,
+                                "resource_id": 308774,
+                                "notes": "",
+                                "details": "",
+                                "start_date": "2017-12-20",
+                                "end_date": "2017-12-29",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-09T11:37:30Z",
+                                "updated_at": "2017-12-12T06:01:11Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2017-12-20",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-21",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-22",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-23",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-24",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-25",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-26",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-27",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-28",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-29",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 10312425,
+                                "client_id": null,
+                                "project_id": 666795,
+                                "resource_id": 308780,
+                                "notes": "",
+                                "details": "",
+                                "start_date": "2017-12-27",
+                                "end_date": "2018-01-02",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-11T07:28:47Z",
+                                "updated_at": "2017-12-11T08:21:58Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2017-12-27",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-28",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2017-12-29",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-01",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-02",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 10398794,
+                                "client_id": null,
+                                "project_id": 666791,
+                                "resource_id": 308774,
+                                "notes": "Test task for test name length and need to see how its looks. This is test plan",
+                                "details": "Test task for test name length and need to see how its looks. This is test plan",
+                                "start_date": "2018-01-01",
+                                "end_date": "2018-01-05",
+                                "billable": true,
+                                "refreshable": false,
+                                "created_at": "2017-12-19T13:43:22Z",
+                                "updated_at": "2017-12-19T13:48:19Z",
+                                "last_updated_by": 147899,
+                                "booker": {
+                                    "id": 147899,
+                                    "name": "Viniston Arockiasamy",
+                                    "email": "myprivcy2015@gmail.com",
+                                    "color": "#ffb400"
+                                },
+                                "durations": [
+                                    {
+                                        "date": "2018-01-01",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-02",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-03",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-04",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    },
+                                    {
+                                        "date": "2018-01-05",
+                                        "duration": 480,
+                                        "start_time": null,
+                                        "end_time": null,
+                                        "waiting": false
+                                    }
+                                ]
+                            }
+                        ]
+                        
                         etag = "c2e3ecb9a19c3816eeb46b2ea75d0aa3";
                         bootData = _.extend(bootData, {
                             bookings: JSON.stringify(data),
@@ -59025,7 +59376,7 @@ if (!Function.prototype.bind) {
         UtilisationBlock.prototype.render = function () {
             var availableFormatted, availableMinutes, lineAvailable, lines, overtimeMinutes, ratio, ref, remainingMinutesInLine, renderableNormalMinutes, renderableUnusedNormalMinutes, renderableUnusedOvertimeMinutes, renderableUsedOvertimeMinutes, unit, unusedNormalMinutes, unusedOvertimeMinutes, usedMinutes, usedNormalMinutes, usedOvertimeMinutes, width;
             availableFormatted = RG.Utils.TimeFormatter.formatMinutes(this.availableMinutes - this.usedMinutes);
-            // this.el.innerHTML = "<div class=\"time-available\">" + availableFormatted + "<div class=\"time-available-linebreak\"></div>free</div>";
+            //this.el.innerHTML = "<div class=\"time-available\">" + availableFormatted + "<div class=\"time-available-linebreak\"></div>free</div>";
             availableMinutes = this.availableMinutes;
             usedMinutes = this.usedMinutes;
             overtimeMinutes = this.overtimeMinutes > this.availableMinutes ? this.availableMinutes : this.overtimeMinutes;
