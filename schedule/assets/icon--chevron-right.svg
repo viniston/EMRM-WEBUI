@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>icon--chevron-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--chevron-right" fill="#7A7A7A">
+            <path d="M2.85500002,5.94163941 L2.85500002,5.94163941 L6.74179003,2.21103499 C6.83773261,2.11732364 6.99614942,2.11955486 7.09432322,2.21549744 L7.77707738,2.88263304 C7.87525118,2.97857562 7.8774824,3.13476121 7.78153983,3.22847256 L3.03572906,7.7846294 C2.98664216,7.8337163 2.91970548,7.85602852 2.85500002,7.85156608 C2.78806334,7.8537973 2.72335788,7.83148507 2.67427098,7.7846294 L-2.07153979,3.22847256 C-2.16748237,3.13476121 -2.16525114,2.97857562 -2.06707734,2.88263304 L-1.38432318,2.21549744 C-1.28614938,2.11955486 -1.12773257,2.11732364 -1.03178999,2.21103499 L2.85500002,5.94163941 Z" id="Fill-1" transform="translate(2.855000, 4.997124) scale(-1, 1) rotate(90.000000) translate(-2.855000, -4.997124) "></path>
+        </g>
+    </g>
+</svg>
