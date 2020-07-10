@@ -345,7 +345,7 @@
 
     templates['resource/card'] = templates['resource/card.ejs'] = function (it) {
         var locals = it, __output = "";
-        ; __output += "<img src=\"\" />\n<h3>Resource Name</h3>\n<h4>Resource Tag line</h4>\n<p class=\"timezone\"></p>\n";
+        ; __output += "<img class=\"activity-name\" src=\"\" />\n<h3 class=\"activity-name\">Resource Name</h3>\n<h4 class=\"activity-name\">Resource Tag line</h4>\n<p class=\"timezone\"></p>\n";
         return __output.trim();
     };
 
