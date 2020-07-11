@@ -7881,7 +7881,8 @@ body {
 }
 
 #header {
-    background-color: #A9D43E;
+    /*background-color: #A9D43E;*/
+    background-color: black;
     height: 100px;
     left: 0;
     right: 0;
@@ -8134,7 +8135,8 @@ nav.main {
 
     nav.main > ul > li > a {
         display: block;
-        color: #4D6610;
+        /* color: #4D6610;*/
+        color: #A9D43E;
         font-size: 14px;
         line-height: 40px;
         text-decoration: none;
