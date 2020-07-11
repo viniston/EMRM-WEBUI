@@ -24867,6 +24867,8 @@
                     }
                     _this.el.querySelector("img").setAttribute("src", _this.model.get("imageUrl"));
                     _this.el.querySelector("img").setAttribute("data-activity-id", _this.model.get("id"));
+                    _this.el.querySelector("h4").setAttribute("data-activity-id", _this.model.get("id"));
+                    _this.el.querySelector("h3").setAttribute("data-activity-id", _this.model.get("id"));
                 };
             })(this));
         };
